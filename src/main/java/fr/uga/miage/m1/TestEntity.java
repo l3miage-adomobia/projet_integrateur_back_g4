@@ -15,5 +15,4 @@ public class TestEntity {
 
     private String name;
 
-    // Avec Lombok, les getters et setters sont générés automatiquement
 }
