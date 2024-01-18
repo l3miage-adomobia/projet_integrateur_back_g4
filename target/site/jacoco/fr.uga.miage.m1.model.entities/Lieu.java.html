@@ -4,23 +4,31 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
-<span class="nc" id="L12">@Setter</span>
-<span class="nc" id="L13">public class Lieu {</span>
+<span class="nc" id="L13">@Setter</span>
+<span class="nc" id="L14">public class Lieu {</span>
     @Id
-<span class="nc" id="L15">    private Long codeInsee;</span>
-<span class="nc" id="L16">    private String codePostal;</span>
-<span class="nc" id="L17">    private String nomCommune;</span>
-<span class="nc" id="L18">    private Double longitudeCommune;</span>
-<span class="nc" id="L19">    private Double latitudeCommune;</span>
+    @NotNull
+<span class="nc" id="L17">    private Long codeInsee;</span>
+    @NotNull
+<span class="nc" id="L19">    private int codePostal;</span>
+    @NotNull
+<span class="nc" id="L21">    private String nomCommune;</span>
+
+    @NotNull
+<span class="nc" id="L24">    private Double longitudeCommune;</span>
+    @NotNull
+<span class="nc" id="L26">    private Double latitudeCommune;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;noDepartement&quot;, referencedColumnName = &quot;noDepartement&quot;)
-<span class="nc" id="L23">    private Departement departement;</span>
+    @NotNull
+<span class="nc" id="L31">    private Departement departement;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -9,24 +9,25 @@ import lombok.Setter;
 @Getter
 <span class="nc" id="L10">@Setter</span>
 <span class="nc" id="L11">public class Reservation {</span>
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-<span class="nc" id="L15">    private Long idReservation;</span>
-
-<span class="nc" id="L17">    private Integer nbPlaces;</span>
+    @EmbeddedId
+<span class="nc" id="L13">    private ReservationId reservationId;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;idOffreDeCovoiturage&quot;, referencedColumnName = &quot;idOffreDeCovoiturage&quot;)
-<span class="nc" id="L21">    private OffreCovoiturage offreCovoiturage;</span>
+    @MapsId(&quot;idOffreDeCovoiturage&quot;)
+<span class="nc" id="L18">    private OffreCovoiturage offreCovoiturage;</span>
 
     @ManyToOne
-    @JoinColumn(name = &quot;idPanier&quot;, referencedColumnName = &quot;idReservation&quot;)
-<span class="nc" id="L25">    private Panier panier;</span>
+    @JoinColumn(name = &quot;idPanier&quot;, referencedColumnName = &quot;idPanier&quot;)
+    @MapsId(&quot;idPanier&quot;)
+<span class="nc" id="L23">    private Panier panier;</span>
 
     @ManyToOne
-    @JoinColumn(name = &quot;idArretCovoiturage&quot;, referencedColumnName = &quot;idArret&quot;)
-<span class="nc" id="L29">    private ArretCovoiturage arretCovoiturage;</span>
+    @JoinColumn(name = &quot;idArret&quot;, referencedColumnName = &quot;idArret&quot;)
+    @MapsId(&quot;idArret&quot;)
+<span class="nc" id="L28">    private ArretCovoiturage arretCovoiturage;</span>
+
+<span class="nc" id="L30">    private Integer nbPlaces;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

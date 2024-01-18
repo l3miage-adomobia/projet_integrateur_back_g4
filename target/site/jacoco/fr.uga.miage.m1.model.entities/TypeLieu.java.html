@@ -3,6 +3,7 @@
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,13 +11,14 @@ import java.util.List;
 
 @Entity
 @Getter
-<span class="nc" id="L13">@Setter</span>
-<span class="nc" id="L14">public class TypeLieu {</span>
+<span class="nc" id="L14">@Setter</span>
+<span class="nc" id="L15">public class TypeLieu {</span>
     @Id
-<span class="nc" id="L16">    private String typeLieu;</span>
+    @NotNull
+<span class="nc" id="L18">    private String typeLieu;</span>
 
     @OneToMany(mappedBy = &quot;typeLieuRelation&quot;)
-<span class="nc" id="L19">    private List&lt;ArretCovoiturage&gt; arretCovoiturages;</span>
+<span class="nc" id="L21">    private List&lt;ArretCovoiturage&gt; arretCovoiturages;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

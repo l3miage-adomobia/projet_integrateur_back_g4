@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Festival.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo-server</a> &gt; <a href="index.source.html" class="el_package">fr.uga.miage.m1.model.entities</a> &gt; <span class="el_source">Festival.java</span></div><h1>Festival.java</h1><pre class="source lang-java linenums">package fr.uga.miage.m1.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -10,26 +11,38 @@ import java.util.List;
 
 @Entity
 @Getter
-<span class="nc" id="L13">@Setter</span>
-<span class="nc" id="L14">public class Festival {</span>
+<span class="nc" id="L14">@Setter</span>
+<span class="nc" id="L15">public class Festival {</span>
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<span class="nc" id="L17">    private Long idFestival;</span>
-<span class="nc" id="L18">    private String nomFestival;</span>
-<span class="nc" id="L19">    private String tarif;</span>
-<span class="nc" id="L20">    private String siteWeb;</span>
-<span class="nc" id="L21">    private LocalDate dateDebut;</span>
-<span class="nc" id="L22">    private LocalDate dateFin;</span>
-<span class="nc" id="L23">    private String lieuPrincipal;</span>
-<span class="nc" id="L24">    private Integer nombrePass;</span>
+    @NotNull
+<span class="nc" id="L19">    private Long idFestival;</span>
+    @NotNull
+<span class="nc" id="L21">    private String nomFestival;</span>
+
+    @NotNull
+<span class="nc" id="L24">    private int tarif;</span>
+
+<span class="nc" id="L26">    private String siteWeb;</span>
+    @JsonFormat(pattern=&quot;dd/MM/yyyy&quot;)
+    @NotNull
+<span class="nc" id="L29">    private LocalDate dateDebut;</span>
+    @JsonFormat(pattern=&quot;dd/MM/yyyy&quot;)
+    @NotNull
+<span class="nc" id="L32">    private LocalDate dateFin;</span>
+    @NotNull
+<span class="nc" id="L34">    private String lieuPrincipal;</span>
+    @NotNull
+<span class="nc" id="L36">    private Integer nombrePass;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;codeInsee&quot;, referencedColumnName = &quot;codeInsee&quot;)
-<span class="nc" id="L28">    private Lieu lieu;</span>
+<span class="nc" id="L40">    private Lieu lieu;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;nomSousDomaine&quot;, referencedColumnName = &quot;nomSousDomaine&quot;)
-<span class="nc" id="L32">    private SousDomaine sousDomaine;</span>
+    @NotNull
+<span class="nc" id="L45">    private SousDomaine sousDomaine;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

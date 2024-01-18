@@ -37,6 +37,7 @@ public class Festival {
 
     @ManyToOne
     @JoinColumn(name = "codeInsee", referencedColumnName = "codeInsee")
+    @NotNull
     private Lieu lieu;
 
     @ManyToOne

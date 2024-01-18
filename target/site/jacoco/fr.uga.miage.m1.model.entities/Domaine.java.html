@@ -2,15 +2,17 @@
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
-<span class="nc" id="L10">@Setter</span>
-<span class="nc" id="L11">public class Domaine {</span>
+<span class="nc" id="L11">@Setter</span>
+<span class="nc" id="L12">public class Domaine {</span>
     @Id
-<span class="nc" id="L13">    private String nomDomaine;</span>
+    @NotNull
+<span class="nc" id="L15">    private String nomDomaine;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

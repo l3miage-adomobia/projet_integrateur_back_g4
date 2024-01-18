@@ -1,6 +1,7 @@
 package fr.uga.miage.m1.model.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,16 +11,19 @@ import lombok.Setter;
 @Setter
 public class Reservation {
     @EmbeddedId
+    @NotNull
     private ReservationId reservationId;
 
     @ManyToOne
     @JoinColumn(name = "idOffreDeCovoiturage", referencedColumnName = "idOffreDeCovoiturage")
     @MapsId("idOffreDeCovoiturage")
+    @NotNull
     private OffreCovoiturage offreCovoiturage;
 
     @ManyToOne
     @JoinColumn(name = "idPanier", referencedColumnName = "idPanier")
     @MapsId("idPanier")
+    @NotNull
     private Panier panier;
 
     @ManyToOne

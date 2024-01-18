@@ -4,20 +4,23 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
-<span class="nc" id="L12">@Setter</span>
-<span class="nc" id="L13">public class SousDomaine {</span>
+<span class="nc" id="L13">@Setter</span>
+<span class="nc" id="L14">public class SousDomaine {</span>
     @Id
-<span class="nc" id="L15">    private String nomSousDomaine;</span>
+    @NotNull
+<span class="nc" id="L17">    private String nomSousDomaine;</span>
 
     // Relation avec Domaine (clé étrangère nomDomaine)
     @ManyToOne
     @JoinColumn(name = &quot;nomDomaine&quot;, referencedColumnName = &quot;nomDomaine&quot;)
-<span class="nc" id="L20">    private Domaine domaine;</span>
+    @NotNull
+<span class="nc" id="L23">    private Domaine domaine;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

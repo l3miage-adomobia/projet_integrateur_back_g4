@@ -4,21 +4,25 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
-<span class="nc" id="L12">@Setter</span>
-<span class="nc" id="L13">public class Departement {</span>
+<span class="nc" id="L13">@Setter</span>
+<span class="nc" id="L14">public class Departement {</span>
     @Id
-<span class="nc" id="L15">    private String noDepartement;</span>
-<span class="nc" id="L16">    private String nomDepartement;</span>
+    @NotNull
+<span class="nc" id="L17">    private String noDepartement;</span>
+    @NotNull
+<span class="nc" id="L19">    private String nomDepartement;</span>
 
     // Relation avec Region (clé étrangère nomRegion)
     @ManyToOne
     @JoinColumn(name = &quot;nomRegion&quot;, referencedColumnName = &quot;nomRegion&quot;)
-<span class="nc" id="L21">    private Region region;</span>
+    @NotNull
+<span class="nc" id="L25">    private Region region;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
