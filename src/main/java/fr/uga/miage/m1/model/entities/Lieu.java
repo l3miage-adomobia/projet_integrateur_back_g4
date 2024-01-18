@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Lieu {
     @Id
     private Long codeInsee;
-    private String codePostal;
+    private int codePostal;
     private String nomCommune;
     private Double longitudeCommune;
     private Double latitudeCommune;

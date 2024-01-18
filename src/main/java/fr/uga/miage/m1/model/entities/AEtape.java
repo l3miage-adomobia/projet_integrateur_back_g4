@@ -7,19 +7,20 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Etape {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class AEtape {
+    @EmbeddedId
+    private AEtapeId aEtapeId;
 
     private String tarif;
     private String duree;
 
     @ManyToOne
     @JoinColumn(name = "idArret", referencedColumnName = "idArret")
+    @MapsId("idArret")
     private ArretCovoiturage arretCovoiturage;
 
     @ManyToOne
     @JoinColumn(name = "idOffreDeCovoiturage", referencedColumnName = "idOffreDeCovoiturage")
+    @MapsId("idOffreDeCovoiturage")
     private OffreCovoiturage offreCovoiturage;
 }

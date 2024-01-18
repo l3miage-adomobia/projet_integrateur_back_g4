@@ -26,6 +26,6 @@ public class OffreCovoiturage {
     private Covoitureur covoitureur;
 
     @OneToMany(mappedBy = "offreCovoiturage")
-    private List<Etape> etapes;
+    private List<AEtape> AEtapes;
 
 }

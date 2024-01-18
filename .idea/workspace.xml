@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d2a05a0-0f75-4cec-a8a3-9108b22819df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ReservationId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af7fef0f-ada7-45b8-905f-1bcc288af83f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/af7fef0f-ada7-45b8-905f-1bcc288af83f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Etape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Lieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Lieu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Panier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ArretCovoiturage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ArretCovoiturage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Etape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Festival.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Festival.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Lieu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Lieu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/OffreCovoiturage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/OffreCovoiturage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,51 +46,53 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="jdkForImporter" value="17" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2b2vQZUgZSN9p2kTmf88Vw7tAof" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/adiladomo/Desktop/Ecole/M1 MIAGE/projet bdi/projet_integrateur_back_g4",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "e5f55852109c73fef5253c48ad6535d6",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MyApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e5f55852109c73fef5253c48ad6535d6&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2",
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;,
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="projet_integrateur_back_g4" />
@@ -93,6 +115,13 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-a73289cf" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,10 +132,50 @@
       <updated>1705425973088</updated>
       <workItem from="1705425974247" duration="2217000" />
       <workItem from="1705439087404" duration="23332000" />
+      <workItem from="1705569624368" duration="5324000" />
+      <workItem from="1705578622028" duration="7147000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/creation-du-modele-de-donnees" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/creation-du-modele-de-donnees" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

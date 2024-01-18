@@ -9,23 +9,24 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Reservation {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idReservation;
-
-    private Integer nbPlaces;
+    @EmbeddedId
+    private ReservationId reservationId;
 
     @ManyToOne
     @JoinColumn(name = "idOffreDeCovoiturage", referencedColumnName = "idOffreDeCovoiturage")
+    @MapsId("idOffreDeCovoiturage")
     private OffreCovoiturage offreCovoiturage;
 
     @ManyToOne
-    @JoinColumn(name = "idPanier", referencedColumnName = "idReservation")
+    @JoinColumn(name = "idPanier", referencedColumnName = "idPanier")
+    @MapsId("idPanier")
     private Panier panier;
 
     @ManyToOne
-    @JoinColumn(name = "idArretCovoiturage", referencedColumnName = "idArret")
+    @JoinColumn(name = "idArret", referencedColumnName = "idArret")
+    @MapsId("idArret")
     private ArretCovoiturage arretCovoiturage;
+
+    private Integer nbPlaces;
 
 }

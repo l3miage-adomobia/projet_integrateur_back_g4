@@ -13,22 +13,21 @@ public class ArretCovoiturage {
     @Id
     private Long idArret;
     private String nomLieu;
-    private String typeLieu;
     private String adresseLieu;
     private Double longitude;
     private Double latitude;
 
     @ManyToOne
-    @JoinColumn(name = "typeLieu_1", referencedColumnName = "typeLieu")
+    @JoinColumn(name = "typeLieu", referencedColumnName = "typeLieu")
     private TypeLieu typeLieuRelation;
 
     @ManyToOne
     @JoinColumn(name = "codeInsee", referencedColumnName = "codeInsee")
     private Lieu lieu;
 
-    // Assume we have the Etape entity mapped already
+    // Assume we have the AEtape entity mapped already
     @OneToMany(mappedBy = "arretCovoiturage")
-    private List<Etape> etapes;
+    private List<AEtape> AEtapes;
 
     // Getters and setters
 }

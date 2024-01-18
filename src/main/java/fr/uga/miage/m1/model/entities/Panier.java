@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 public class Panier {
     @Id
-    private Long idReservation;
+    private Long idPanier;
     private Integer nbPlacesReserve;
     private Boolean valide;
 
