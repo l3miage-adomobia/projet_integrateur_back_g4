@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,6 +15,7 @@ import lombok.Setter;
 public class Panier {
     @Id
     @NotNull
+    @Size(max = 36)
     private Long idPanier;
     @NotNull
     private Integer nbPlacesReserve;
@@ -23,6 +25,7 @@ public class Panier {
     @ManyToOne
     @JoinColumn(name = "idFestivalier")
     @NotNull
+    @Size(max = 36)
     private Festivalier festivalier;
 
 }

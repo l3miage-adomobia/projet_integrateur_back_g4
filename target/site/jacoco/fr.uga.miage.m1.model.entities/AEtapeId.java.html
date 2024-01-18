@@ -2,12 +2,15 @@
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
+import jakarta.validation.constraints.Size;
 
 import java.io.Serializable;
 
 @Embeddable
-<span class="nc" id="L9">public class AEtapeId implements Serializable {</span>
+<span class="nc" id="L10">public class AEtapeId implements Serializable {</span>
+    @Size(max = 36)
     private Long idArret;
+    @Size(max = 36)
     private Long idOffreDeCovoiturage;
 
 }

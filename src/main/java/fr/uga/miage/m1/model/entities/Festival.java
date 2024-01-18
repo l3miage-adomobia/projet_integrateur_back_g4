@@ -3,6 +3,7 @@ package fr.uga.miage.m1.model.entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,13 +17,17 @@ public class Festival {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
+    @Size(max = 36)
     private Long idFestival;
     @NotNull
+    @Size(max = 50)
     private String nomFestival;
 
     @NotNull
+    @Size(max = 8)
     private int tarif;
 
+    @Size(max = 50)
     private String siteWeb;
     @JsonFormat(pattern="dd/MM/yyyy")
     @NotNull
@@ -31,6 +36,7 @@ public class Festival {
     @NotNull
     private LocalDate dateFin;
     @NotNull
+    @Size(max = 50)
     private String lieuPrincipal;
     @NotNull
     private Integer nombrePass;

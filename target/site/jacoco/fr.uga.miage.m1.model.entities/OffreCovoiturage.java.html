@@ -3,6 +3,7 @@
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,33 +11,39 @@ import java.util.List;
 
 @Entity
 @Getter
-<span class="nc" id="L13">@Setter</span>
-<span class="nc" id="L14">public class OffreCovoiturage {</span>
+<span class="nc" id="L14">@Setter</span>
+<span class="nc" id="L15">public class OffreCovoiturage {</span>
     @Id
     @NotNull
-<span class="nc" id="L17">    private Long idOffreDeCovoiturage;</span>
+    @Size(max = 36)
+<span class="nc" id="L19">    private Long idOffreDeCovoiturage;</span>
     @NotNull
-<span class="nc" id="L19">    private Integer nbPlacesOffertes;</span>
+<span class="nc" id="L21">    private Integer nbPlacesOffertes;</span>
     @NotNull
-<span class="nc" id="L21">    private String modeleVoiture;</span>
+    @Size(max = 36)
+<span class="nc" id="L24">    private String modeleVoiture;</span>
     @NotNull
-<span class="nc" id="L23">    private String depart;</span>
+    @Size(max = 36)
+<span class="nc" id="L27">    private String depart;</span>
     @NotNull
-<span class="nc" id="L25">    private String arrive;</span>
+    @Size(max = 36)
+<span class="nc" id="L30">    private String arrive;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;idFestival&quot;, referencedColumnName = &quot;idFestival&quot;)
     @NotNull
-<span class="nc" id="L30">    private Festival festival;</span>
+    @Size(max = 36)
+<span class="nc" id="L36">    private Festival festival;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;idCovoitureur&quot;)
     @NotNull
-<span class="nc" id="L35">    private Covoitureur covoitureur;</span>
+    @Size(max = 36)
+<span class="nc" id="L42">    private Covoitureur covoitureur;</span>
 
     @OneToMany(mappedBy = &quot;offreCovoiturage&quot;)
     @NotEmpty
-<span class="nc" id="L39">    private List&lt;AEtape&gt; AEtapes;</span>
+<span class="nc" id="L46">    private List&lt;AEtape&gt; AEtapes;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

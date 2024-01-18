@@ -3,6 +3,7 @@
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,38 +12,44 @@ import java.util.List;
 
 @Entity
 @Getter
-<span class="nc" id="L14">@Setter</span>
-<span class="nc" id="L15">public class Festival {</span>
+<span class="nc" id="L15">@Setter</span>
+<span class="nc" id="L16">public class Festival {</span>
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
-<span class="nc" id="L19">    private Long idFestival;</span>
+    @Size(max = 36)
+<span class="nc" id="L21">    private Long idFestival;</span>
     @NotNull
-<span class="nc" id="L21">    private String nomFestival;</span>
+    @Size(max = 50)
+<span class="nc" id="L24">    private String nomFestival;</span>
 
     @NotNull
-<span class="nc" id="L24">    private int tarif;</span>
+    @Size(max = 8)
+<span class="nc" id="L28">    private int tarif;</span>
 
-<span class="nc" id="L26">    private String siteWeb;</span>
+    @Size(max = 50)
+<span class="nc" id="L31">    private String siteWeb;</span>
     @JsonFormat(pattern=&quot;dd/MM/yyyy&quot;)
     @NotNull
-<span class="nc" id="L29">    private LocalDate dateDebut;</span>
+<span class="nc" id="L34">    private LocalDate dateDebut;</span>
     @JsonFormat(pattern=&quot;dd/MM/yyyy&quot;)
     @NotNull
-<span class="nc" id="L32">    private LocalDate dateFin;</span>
+<span class="nc" id="L37">    private LocalDate dateFin;</span>
     @NotNull
-<span class="nc" id="L34">    private String lieuPrincipal;</span>
+    @Size(max = 50)
+<span class="nc" id="L40">    private String lieuPrincipal;</span>
     @NotNull
-<span class="nc" id="L36">    private Integer nombrePass;</span>
+<span class="nc" id="L42">    private Integer nombrePass;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;codeInsee&quot;, referencedColumnName = &quot;codeInsee&quot;)
-<span class="nc" id="L40">    private Lieu lieu;</span>
+    @NotNull
+<span class="nc" id="L47">    private Lieu lieu;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;nomSousDomaine&quot;, referencedColumnName = &quot;nomSousDomaine&quot;)
     @NotNull
-<span class="nc" id="L45">    private SousDomaine sousDomaine;</span>
+<span class="nc" id="L52">    private SousDomaine sousDomaine;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

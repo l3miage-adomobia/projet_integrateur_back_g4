@@ -2,20 +2,22 @@
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
-<span class="nc" id="L10">@Setter</span>
+<span class="nc" id="L11">@Setter</span>
 @Inheritance(strategy = InheritanceType.JOINED)
-<span class="nc" id="L12">public abstract class Utilisateur {</span>
+<span class="nc" id="L13">public abstract class Utilisateur {</span>
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<span class="nc" id="L15">    private Long idUtilisateur;</span>
+<span class="nc" id="L16">    private Long idUtilisateur;</span>
 
-<span class="nc" id="L17">    private String nom;</span>
+    @Size(max = 36)
+<span class="nc" id="L19">    private String nom;</span>
     @Email
-<span class="nc" id="L19">    private String email;</span>
+<span class="nc" id="L21">    private String email;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

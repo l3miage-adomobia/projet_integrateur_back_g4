@@ -2,31 +2,37 @@
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
-<span class="nc" id="L10">@Setter</span>
-<span class="nc" id="L11">public class AEtape {</span>
+<span class="nc" id="L11">@Setter</span>
+<span class="nc" id="L12">public class AEtape {</span>
     @EmbeddedId
-<span class="nc" id="L13">    private AEtapeId aEtapeId;</span>
+    @Size(max = 36)
+<span class="nc" id="L15">    private AEtapeId aEtapeId;</span>
 
     @NotNull
-<span class="nc" id="L16">    private String tarif;</span>
+    @Size(max = 8)
+<span class="nc" id="L19">    private String tarif;</span>
     @NotNull
-<span class="nc" id="L18">    private String duree;</span>
+    @Size(max = 4)
+<span class="nc" id="L22">    private String duree;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;idArret&quot;, referencedColumnName = &quot;idArret&quot;)
     @MapsId(&quot;idArret&quot;)
     @NotNull
-<span class="nc" id="L24">    private ArretCovoiturage arretCovoiturage;</span>
+    @Size(max = 36)
+<span class="nc" id="L29">    private ArretCovoiturage arretCovoiturage;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;idOffreDeCovoiturage&quot;, referencedColumnName = &quot;idOffreDeCovoiturage&quot;)
     @MapsId(&quot;idOffreDeCovoiturage&quot;)
     @NotNull
-<span class="nc" id="L30">    private OffreCovoiturage offreCovoiturage;</span>
+    @Size(max = 36)
+<span class="nc" id="L36">    private OffreCovoiturage offreCovoiturage;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

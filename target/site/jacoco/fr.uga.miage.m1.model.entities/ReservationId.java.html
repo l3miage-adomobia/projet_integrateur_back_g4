@@ -2,18 +2,22 @@
 
 import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.io.Serializable;
 
 @Embeddable
-<span class="nc" id="L9">public class ReservationId implements Serializable{</span>
+<span class="nc" id="L10">public class ReservationId implements Serializable{</span>
     @NotNull
+    @Size(max = 36)
     private Long idOffreDeCovoiturage;
 
     @NotNull
+    @Size(max = 36)
     private Long idPanier;
 
     @NotNull
+    @Size(max = 36)
     private Long idArret;
 
 }

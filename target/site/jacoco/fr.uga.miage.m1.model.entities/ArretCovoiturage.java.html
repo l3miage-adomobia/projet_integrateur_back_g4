@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ArretCovoiturage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo-server</a> &gt; <a href="index.source.html" class="el_package">fr.uga.miage.m1.model.entities</a> &gt; <span class="el_source">ArretCovoiturage.java</span></div><h1>ArretCovoiturage.java</h1><pre class="source lang-java linenums">package fr.uga.miage.m1.model.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,33 +12,43 @@ import java.util.List;
 
 @Entity
 @Getter
-<span class="nc" id="L12">@Setter</span>
-<span class="nc" id="L13">public class ArretCovoiturage {</span>
+<span class="nc" id="L15">@Setter</span>
+<span class="nc" id="L16">public class ArretCovoiturage {</span>
     @Id
     @NotNull
-<span class="nc" id="L16">    private Long idArret;</span>
+    @Size(max = 36)
+<span class="nc" id="L20">    private Long idArret;</span>
     @NotNull
-<span class="nc" id="L18">    private String nomLieu;</span>
-<span class="nc" id="L19">    private String adresseLieu;</span>
+    @Size(max = 50)
+<span class="nc" id="L23">    private String nomLieu;</span>
+    @Size(max = 50)
+<span class="nc" id="L25">    private String adresseLieu;</span>
     @NotNull
-<span class="nc" id="L21">    private Double longitude;</span>
+    @Min(-180)
+    @Max(180)
+<span class="nc" id="L29">    private Double longitude;</span>
+
     @NotNull
-<span class="nc" id="L23">    private Double latitude;</span>
+    @Min(-90)
+    @Max(90)
+<span class="nc" id="L34">    private Double latitude;</span>
 
     @ManyToOne
-    @JoinColumn(name = &quot;typeLieu&quot;, referencedColumnName = &quot;typeLieu&quot;)
+    @JoinColumn(name = &quot;idTypeLieu&quot;, referencedColumnName = &quot;idTypeLieu&quot;)
     @NotNull
-<span class="nc" id="L28">    private TypeLieu typeLieuRelation;</span>
+    @Size(max = 36)
+<span class="nc" id="L40">    private TypeLieu typeLieuRelation;</span>
 
     @ManyToOne
     @JoinColumn(name = &quot;codeInsee&quot;, referencedColumnName = &quot;codeInsee&quot;)
     @NotNull
-<span class="nc" id="L33">    private Lieu lieu;</span>
+    @Size(max = 10)
+<span class="nc" id="L46">    private Lieu lieu;</span>
 
     // Assume we have the AEtape entity mapped already
     @OneToMany(mappedBy = &quot;arretCovoiturage&quot;)
     @NotNull
-<span class="nc" id="L38">    private List&lt;AEtape&gt; AEtapes;</span>
+<span class="nc" id="L51">    private List&lt;AEtape&gt; AEtapes;</span>
 
     // Getters and setters
 }
