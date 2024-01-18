@@ -5,27 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d2a05a0-0f75-4cec-a8a3-9108b22819df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ReservationId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af7fef0f-ada7-45b8-905f-1bcc288af83f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/af7fef0f-ada7-45b8-905f-1bcc288af83f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/AEtape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/AEtape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Etape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Departement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Domaine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Domaine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Lieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Lieu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Panier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ArretCovoiturage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ArretCovoiturage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Etape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Festival.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Festival.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Lieu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Lieu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/OffreCovoiturage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/OffreCovoiturage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Region.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ReservationId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ReservationId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/SousDomaine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/SousDomaine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/TypeLieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/TypeLieu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Utilisateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +33,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -141,21 +139,6 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="feature/creation-du-modele-de-donnees" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -173,6 +156,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/creation-du-modele-de-donnees" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
