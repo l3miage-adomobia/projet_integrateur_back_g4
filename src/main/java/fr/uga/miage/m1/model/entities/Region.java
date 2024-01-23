@@ -1,7 +1,7 @@
 package fr.uga.miage.m1.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +11,7 @@ import lombok.Setter;
 public class Region {
     @Id
     @NotNull
+    @Column(length = 36)
     private String nomRegion;
 
 }

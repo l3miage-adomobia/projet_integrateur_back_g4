@@ -1,8 +1,6 @@
 package fr.uga.miage.m1.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.*;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -15,11 +13,9 @@ public class SousDomaine {
     @Id
     @NotNull
     private String nomSousDomaine;
-
-    // Relation avec Domaine (clé étrangère nomDomaine)
-    @ManyToOne
-    @JoinColumn(name = "nomDomaine", referencedColumnName = "nomDomaine")
+    @JoinColumn(name = "FK_nomDomaine", referencedColumnName = "nomDomaine")
     @NotNull
+    @ManyToOne
     private Domaine domaine;
 
 }

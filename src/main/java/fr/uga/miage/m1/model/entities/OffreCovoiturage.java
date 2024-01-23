@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -16,26 +17,25 @@ public class OffreCovoiturage {
     @NotNull
     private Long idOffreDeCovoiturage;
     @NotNull
-    private Integer nbPlacesOffertes;
+    private int nbPlacesOffertes;
     @NotNull
+    @Column(length = 36)
     private String modeleVoiture;
-    @NotNull
-    private String depart;
-    @NotNull
-    private String arrive;
+
+    @NotEmpty
+    @OneToMany
+    private Collection<Etape> etapes;
 
     @ManyToOne
-    @JoinColumn(name = "idFestival", referencedColumnName = "idFestival")
+    @JoinColumn(name = "FK_idFestival", referencedColumnName = "idFestival")
     @NotNull
     private Festival festival;
 
     @ManyToOne
-    @JoinColumn(name = "idCovoitureur")
+    @JoinColumn(name = "FK_idUtilisateur", referencedColumnName = "idUtilisateur")
     @NotNull
-    private Covoitureur covoitureur;
+    private Utilisateur covoitureur;
 
-    @OneToMany(mappedBy = "offreCovoiturage")
-    @NotEmpty
-    private List<AEtape> AEtapes;
+
 
 }

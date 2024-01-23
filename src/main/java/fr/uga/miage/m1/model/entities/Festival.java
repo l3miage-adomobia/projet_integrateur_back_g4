@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -18,11 +19,12 @@ public class Festival {
     @NotNull
     private Long idFestival;
     @NotNull
+    @Column(length = 36)
     private String nomFestival;
-
     @NotNull
     private int tarif;
 
+    @Column(length = 50)
     private String siteWeb;
     @JsonFormat(pattern="dd/MM/yyyy")
     @NotNull
@@ -31,18 +33,21 @@ public class Festival {
     @NotNull
     private LocalDate dateFin;
     @NotNull
+    @Column(length = 36)
     private String lieuPrincipal;
     @NotNull
-    private Integer nombrePass;
+    private int nombrePass;
 
     @ManyToOne
-    @JoinColumn(name = "codeInsee", referencedColumnName = "codeInsee")
+    @JoinColumn(name = "FK_codeInsee", referencedColumnName = "codeInsee")
     @NotNull
     private Lieu lieu;
 
     @ManyToOne
-    @JoinColumn(name = "nomSousDomaine", referencedColumnName = "nomSousDomaine")
+    @JoinColumn(name = "FK_nomSousDomaine", referencedColumnName = "nomSousDomaine")
     @NotNull
     private SousDomaine sousDomaine;
 
+    @OneToMany(mappedBy ="festival")
+    private Collection<OffreCovoiturage> covoiturages;
 }

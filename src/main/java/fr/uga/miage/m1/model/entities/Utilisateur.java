@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Collection;
+
 @Entity
 @Getter
 @Setter
@@ -14,7 +16,11 @@ public abstract class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUtilisateur;
 
+    @Column(length = 36)
     private String nom;
     @Email
     private String email;
+
+    @OneToMany(mappedBy ="festivalier")
+    private Collection<Panier> paniers;
 }

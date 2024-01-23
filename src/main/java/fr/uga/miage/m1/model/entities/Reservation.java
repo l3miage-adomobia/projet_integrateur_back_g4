@@ -6,31 +6,25 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "reservation")
 @Getter
 @Setter
 public class Reservation {
-    @EmbeddedId
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @NotNull
-    private ReservationId reservationId;
+    private Long idReservation;
+    @NotNull
+    private int nbPlaces;
+
+    @OneToOne
+    @JoinColumn(name = "FK_idEtape", referencedColumnName = "idEtape")
+    @NotNull
+    private Etape trajet;
 
     @ManyToOne
-    @JoinColumn(name = "idOffreDeCovoiturage", referencedColumnName = "idOffreDeCovoiturage")
-    @MapsId("idOffreDeCovoiturage")
-    @NotNull
-    private OffreCovoiturage offreCovoiturage;
-
-    @ManyToOne
-    @JoinColumn(name = "idPanier", referencedColumnName = "idPanier")
-    @MapsId("idPanier")
+    @JoinColumn(name = "FK_idPanier", referencedColumnName = "idPanier")
     @NotNull
     private Panier panier;
-
-    @ManyToOne
-    @JoinColumn(name = "idArret", referencedColumnName = "idArret")
-    @MapsId("idArret")
-    private ArretCovoiturage arretCovoiturage;
-
-    private Integer nbPlaces;
 
 }

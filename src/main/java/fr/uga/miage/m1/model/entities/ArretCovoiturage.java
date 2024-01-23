@@ -12,10 +12,13 @@ import java.util.List;
 @Setter
 public class ArretCovoiturage {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @NotNull
     private Long idArret;
     @NotNull
+    @Column(length=36)
     private String nomLieu;
+    @Column(length=50)
     private String adresseLieu;
     @NotNull
     private Double longitude;
@@ -23,19 +26,8 @@ public class ArretCovoiturage {
     private Double latitude;
 
     @ManyToOne
-    @JoinColumn(name = "typeLieu", referencedColumnName = "typeLieu")
-    @NotNull
-    private TypeLieu typeLieuRelation;
-
-    @ManyToOne
-    @JoinColumn(name = "codeInsee", referencedColumnName = "codeInsee")
+    @JoinColumn(name = "FK_codeInsee", referencedColumnName = "codeInsee")
     @NotNull
     private Lieu lieu;
 
-    // Assume we have the AEtape entity mapped already
-    @OneToMany(mappedBy = "arretCovoiturage")
-    @NotNull
-    private List<AEtape> AEtapes;
-
-    // Getters and setters
 }
