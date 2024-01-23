@@ -1,0 +1,9 @@
+
+_
+java:S1128"BRemove this unused import 'fr.uga.miage.m1.mapper.FestivalMapper'.(Ë¹ßÂ8‹™¿·Ó1
+l
+java:S1128"JRemove this unused import 'fr.uga.miage.m1.repository.FestivalRepository'.(‹Œƒ‹üÿÿÿÿ8Œ™¿·Ó1
+i
+java:S1128"GRemove this unused import 'fr.uga.miage.m1.request.FestivalDTORequest'.(„ƒšÙúÿÿÿÿ8Œ™¿·Ó1
+u
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.RestController'.(±íþ¡þÿÿÿÿ8üÏÈ·Ó1

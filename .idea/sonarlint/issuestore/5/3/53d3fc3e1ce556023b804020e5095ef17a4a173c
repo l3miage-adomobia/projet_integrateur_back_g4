@@ -1,0 +1,18 @@
+
+U
+java:S1854"?Remove this useless assignment to local variable "reservation".(ä„Ä©
+F
+java:S1481"0Remove this unused "reservation" local variable.(ä„Ä©
+n
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ
+z
+java:S1128"dRemove this unused import 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration'.(¦–·Ë
+e
+java:S1128	"ORemove this unused import 'org.springframework.web.bind.annotation.GetMapping'.(‡¡‰Ø
+l
+java:S1128
+"QRemove this unused import 'org.springframework.web.bind.annotation.ResponseBody'.(•¶¶êøÿÿÿÿ
+n
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.RestController'.(±íþ¡þÿÿÿÿ
+I
+java:S1128"3Remove this unused import 'lombok.extern.java.Log'.(Ë¡±ì

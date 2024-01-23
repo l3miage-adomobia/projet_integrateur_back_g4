@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FestivalMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo-server</a> &gt; <a href="index.source.html" class="el_package">fr.uga.miage.m1.mapper</a> &gt; <span class="el_source">FestivalMapperImpl.java</span></div><h1>FestivalMapperImpl.java</h1><pre class="source lang-java linenums">package fr.uga.miage.m1.mapper;
+
+import fr.uga.miage.m1.model.entities.Festival;
+import fr.uga.miage.m1.request.FestivalDTORequest;
+import fr.uga.miage.m1.response.FestivalDTOresponse;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2024-01-23T17:51:30+0100&quot;,
+    comments = &quot;version: 1.6.0.Beta1, compiler: javac, environment: Java 17.0.6 (Oracle Corporation)&quot;
+)
+@Component
+<span class="nc" id="L15">public class FestivalMapperImpl implements FestivalMapper {</span>
+
+    @Override
+    public FestivalDTOresponse toDto(Festival Festival) {
+<span class="nc bnc" id="L19" title="All 2 branches missed.">        if ( Festival == null ) {</span>
+<span class="nc" id="L20">            return null;</span>
+        }
+
+<span class="nc" id="L23">        FestivalDTOresponse.FestivalDTOresponseBuilder festivalDTOresponse = FestivalDTOresponse.builder();</span>
+
+<span class="nc" id="L25">        festivalDTOresponse.festivalId( Festival.getFestivalId() );</span>
+<span class="nc" id="L26">        festivalDTOresponse.nomFestival( Festival.getNomFestival() );</span>
+<span class="nc" id="L27">        festivalDTOresponse.tarif( Festival.getTarif() );</span>
+<span class="nc" id="L28">        festivalDTOresponse.siteWeb( Festival.getSiteWeb() );</span>
+<span class="nc" id="L29">        festivalDTOresponse.dateDebut( Festival.getDateDebut() );</span>
+<span class="nc" id="L30">        festivalDTOresponse.dateFin( Festival.getDateFin() );</span>
+<span class="nc" id="L31">        festivalDTOresponse.lieuPrincipal( Festival.getLieuPrincipal() );</span>
+<span class="nc" id="L32">        festivalDTOresponse.nombrePass( Festival.getNombrePass() );</span>
+
+<span class="nc" id="L34">        return festivalDTOresponse.build();</span>
+    }
+
+    @Override
+    public Festival toEntity(FestivalDTORequest request) {
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if ( request == null ) {</span>
+<span class="nc" id="L40">            return null;</span>
+        }
+
+<span class="nc" id="L43">        Festival festival = new Festival();</span>
+
+<span class="nc" id="L45">        festival.setFestivalId( request.getFestivalId() );</span>
+<span class="nc" id="L46">        festival.setNomFestival( request.getNomFestival() );</span>
+<span class="nc" id="L47">        festival.setTarif( request.getTarif() );</span>
+<span class="nc" id="L48">        festival.setSiteWeb( request.getSiteWeb() );</span>
+<span class="nc" id="L49">        festival.setDateDebut( request.getDateDebut() );</span>
+<span class="nc" id="L50">        festival.setDateFin( request.getDateFin() );</span>
+<span class="nc" id="L51">        festival.setLieuPrincipal( request.getLieuPrincipal() );</span>
+<span class="nc" id="L52">        festival.setNombrePass( request.getNombrePass() );</span>
+
+<span class="nc" id="L54">        return festival;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

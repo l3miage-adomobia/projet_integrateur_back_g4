@@ -5,22 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d2a05a0-0f75-4cec-a8a3-9108b22819df" name="Changes" comment="[Mapping] Constraints annotations done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/apiError/FestivalNotFoundErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/controller/FestivalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/controller/RegionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/enpoint/FestivalEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/mapper/FestivalMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/mapper/RegionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/dto/RegionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/repository/FestivalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/repository/RegionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/response/FestivalDTOresponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/service/FestivalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/service/RegionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba62dba021e69e4bfda2cbb4bc6e6fd8b9cb3e15" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/ba62dba021e69e4bfda2cbb4bc6e6fd8b9cb3e15" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3c38307e5be3be4e8f8d05786ae03c03ca24c18" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3c38307e5be3be4e8f8d05786ae03c03ca24c18" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7f44177543c5a9a76250149b0dc248a169ae273" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7f44177543c5a9a76250149b0dc248a169ae273" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/AEtape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/AEtapeId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Covoitureur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Departement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Domaine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/AEtape.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/AEtape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ArretCovoiturage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ArretCovoiturage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Departement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Departement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Domaine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Domaine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festivalier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Lieu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Organisateur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Panier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Region.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ReservationId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/SousDomaine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/TypeLieu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Utilisateur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fr/uga/miage/m1/MyApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/uga/miage/m1/MyApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/MyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/MyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/AEtape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/AEtapeId.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ArretCovoiturage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Covoitureur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Departement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Domaine.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Festival.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Festival.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Lieu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Lieu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/OffreCovoiturage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/OffreCovoiturage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Panier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Panier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Festivalier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Lieu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/OffreCovoiturage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Organisateur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Panier.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Region.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Region.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ReservationId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ReservationId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/SousDomaine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/SousDomaine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/TypeLieu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/TypeLieu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Utilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Utilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Reservation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/ReservationId.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/SousDomaine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/TypeLieu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/uga/miage/m1/model/entities/Utilisateur.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-server-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-server-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-server-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-server-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
@@ -28,52 +71,51 @@
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/ArretCovoiturage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/ArretCovoiturage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/ArretCovoiturage.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/ArretCovoiturage.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Covoitureur.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Covoitureur.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Departement.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Departement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Departement.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Departement.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Domaine.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Domaine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Domaine.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Domaine.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Etape.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Etape.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/ArretCovoiturage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/ArretCovoiturage.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Covoitureur.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Covoitureur.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Departement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Departement.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Domaine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Domaine.java.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festival.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festival.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festival.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festival.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festivalier.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festivalier.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Lieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Lieu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Lieu.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Lieu.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/OffreCovoiturage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/OffreCovoiturage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/OffreCovoiturage.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/OffreCovoiturage.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Organisateur.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Organisateur.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Panier.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Panier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Panier.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Panier.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festivalier.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Festivalier.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Lieu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Lieu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/OffreCovoiturage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/OffreCovoiturage.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Organisateur.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Organisateur.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Panier.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Panier.java.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Region.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Region.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Region.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Region.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Reservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Reservation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Reservation.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Reservation.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/SousDomaine.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/SousDomaine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/SousDomaine.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/SousDomaine.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/TypeLieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/TypeLieu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/TypeLieu.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/TypeLieu.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Utilisateur.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Utilisateur.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Utilisateur.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Utilisateur.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Reservation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Reservation.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/SousDomaine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/SousDomaine.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/TypeLieu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/TypeLieu.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Utilisateur.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/Utilisateur.java.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1.model.entities/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/DatabaseSeeder.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/DatabaseSeeder.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/DatabaseSeeder.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/DatabaseSeeder.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/MyApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/MyApplication.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/MyApplication.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/MyApplication.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/TestEntity.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/TestEntity.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/TestEntity.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/TestEntity.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/fr.uga.miage.m1/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-01-17T23-36-13_746.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/uga/miage/m1/MyApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/uga/miage/m1/MyApplicationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +147,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -114,45 +159,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MyApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;e5f55852109c73fef5253c48ad6535d6&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MyApplication.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.MyApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "e5f55852109c73fef5253c48ad6535d6",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;,
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2",
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.MyApplication">
     <configuration name="MyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.uga.miage.m1.MyApplication" />
       <module name="demo-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.uga.miage.m1.*" />
+          <option name="PATTERN" value="fr.uga.miage.m1.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,6 +251,11 @@
       <workItem from="1705439087404" duration="23332000" />
       <workItem from="1705569624368" duration="5324000" />
       <workItem from="1705578622028" duration="7147000" />
+      <workItem from="1705753080642" duration="9858000" />
+      <workItem from="1705908706227" duration="12846000" />
+      <workItem from="1705995902394" duration="2828000" />
+      <workItem from="1706000647348" duration="11824000" />
+      <workItem from="1706024055629" duration="6357000" />
     </task>
     <task id="LOCAL-00001" summary="[Mapping] Constraints annotations done">
       <created>1705590595787</created>
@@ -220,32 +271,16 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature/creation-du-modele-de-donnees" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="structureBranch" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="feature/creation-du-modele-de-donnees" />
@@ -256,9 +291,50 @@
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="structureBranch" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[Mapping] Constraints annotations done" />
     <option name="LAST_COMMIT_MESSAGE" value="[Mapping] Constraints annotations done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/service/RegionService.java</url>
+          <line>19</line>
+          <properties class="fr.uga.miage.m1.service.RegionService" method="createRegion">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/service/RegionService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

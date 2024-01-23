@@ -1,22 +1,21 @@
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Lieu.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Panier.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Covoitureur.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\SousDomaine.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\AEtapeId.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Festival.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\ReservationId.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Organisateur.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\DatabaseSeeder.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\TestEntityRepository.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\OffreCovoiturage.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Reservation.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Festivalier.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Domaine.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\AEtape.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\TypeLieu.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\ArretCovoiturage.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Region.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\TestEntity.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Utilisateur.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\model\entities\Departement.java
-C:\Users\matia\OneDrive\Documents\UGA\S7\Projet Integrateur Donnees\projet_integrateur_back_g4\src\main\java\fr\uga\miage\m1\MyApplication.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/exception/technical/FestivalEntityNotFoundException.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/model/entities/Festival.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/mapper/RegionMapper.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/response/FestivalDTOresponse.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/request/RegionDTORequest.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/repository/RegionRepository.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/TestEntity.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/DatabaseSeeder.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/controller/FestivalController.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/MyApplication.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/model/entities/Region.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/repository/FestivalRepository.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/apiError/FestivalNotFoundErrorResponse.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/service/FestivalService.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/mapper/FestivalMapper.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/TestEntityRepository.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/enpoint/FestivalEndpoint.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/config/SwaggerConfig.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/service/RegionService.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/controller/RegionController.java
+/home/guira/l3miage-salouha_repos/projet_integrateur_back_g4/src/main/java/fr/uga/miage/m1/request/FestivalDTORequest.java

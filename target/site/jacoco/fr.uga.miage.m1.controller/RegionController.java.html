@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegionController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo-server</a> &gt; <a href="index.source.html" class="el_package">fr.uga.miage.m1.controller</a> &gt; <span class="el_source">RegionController.java</span></div><h1>RegionController.java</h1><pre class="source lang-java linenums">package fr.uga.miage.m1.controller;
+
+import fr.uga.miage.m1.request.RegionDTORequest;
+import fr.uga.miage.m1.service.RegionService;
+import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(&quot;/api&quot;)
+<span class="nc" id="L14">@RequiredArgsConstructor</span>
+@Api(tags = &quot;Your API Tag&quot;, description = &quot;Description of your API&quot;)
+public class RegionController {
+
+    private final RegionService regionService;
+
+    @Operation(description = &quot;Création d'une entité Region&quot;)
+    @ApiResponse(responseCode = &quot;201&quot;, description = &quot;L'entité Region a bien été créée.&quot;)
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping(&quot;/regions&quot;)
+    public void createEntityRegion(@RequestBody RegionDTORequest request) {
+<span class="nc" id="L25">        regionService.createRegion(request);</span>
+<span class="nc" id="L26">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

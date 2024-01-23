@@ -16,33 +16,24 @@ public class Festival {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
-    private Long idFestival;
+    private Long festivalId;
+
     @NotNull
     private String nomFestival;
 
-    @NotNull
+
     private int tarif;
 
     private String siteWeb;
     @JsonFormat(pattern="dd/MM/yyyy")
-    @NotNull
+
     private LocalDate dateDebut;
     @JsonFormat(pattern="dd/MM/yyyy")
-    @NotNull
+
     private LocalDate dateFin;
-    @NotNull
+
     private String lieuPrincipal;
-    @NotNull
+
     private Integer nombrePass;
-
-    @ManyToOne
-    @JoinColumn(name = "codeInsee", referencedColumnName = "codeInsee")
-    @NotNull
-    private Lieu lieu;
-
-    @ManyToOne
-    @JoinColumn(name = "nomSousDomaine", referencedColumnName = "nomSousDomaine")
-    @NotNull
-    private SousDomaine sousDomaine;
 
 }

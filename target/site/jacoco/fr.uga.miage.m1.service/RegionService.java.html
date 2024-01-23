@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegionService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo-server</a> &gt; <a href="index.source.html" class="el_package">fr.uga.miage.m1.service</a> &gt; <span class="el_source">RegionService.java</span></div><h1>RegionService.java</h1><pre class="source lang-java linenums">package fr.uga.miage.m1.service;
+
+import fr.uga.miage.m1.mapper.FestivalMapper;
+import fr.uga.miage.m1.mapper.RegionMapper;
+import fr.uga.miage.m1.repository.FestivalRepository;
+import fr.uga.miage.m1.repository.RegionRepository;
+import fr.uga.miage.m1.request.FestivalDTORequest;
+import fr.uga.miage.m1.request.RegionDTORequest;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
+
+@Service
+<span class="nc" id="L14">@RequiredArgsConstructor</span>
+public class RegionService {
+    private final RegionMapper regionMapper;
+    private final RegionRepository regionRepository;
+
+    public void createRegion(final RegionDTORequest regionDTORequest) {
+
+<span class="nc" id="L21">        regionRepository.save(regionMapper.toEntity(regionDTORequest));</span>
+<span class="nc" id="L22">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
