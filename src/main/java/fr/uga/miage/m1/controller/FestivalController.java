@@ -2,6 +2,8 @@ package fr.uga.miage.m1.controller;
 
 import fr.uga.miage.m1.enpoint.FestivalEndpoint;
 import fr.uga.miage.m1.exception.technical.FestivalEntityNotFoundException;
+import fr.uga.miage.m1.mapper.FestivalMapper;
+import fr.uga.miage.m1.model.entities.Festival;
 import fr.uga.miage.m1.request.FestivalDTORequest;
 import fr.uga.miage.m1.response.FestivalDTOresponse;
 import fr.uga.miage.m1.service.FestivalService;

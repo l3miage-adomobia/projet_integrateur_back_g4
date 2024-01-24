@@ -1,5 +1,6 @@
 package fr.uga.miage.m1.controller;
 
+import fr.uga.miage.m1.exception.technical.FestivalEntityNotFoundException;
 import fr.uga.miage.m1.model.dto.RegionDTO;
 import fr.uga.miage.m1.model.entities.Region;
 import fr.uga.miage.m1.repository.RegionRepository;
@@ -31,8 +32,12 @@ public class RegionController {
     @Operation(description = "Création d'une entité Region")
     @ApiResponse(responseCode = "201", description = "L'entité Region a bien été créée.")
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping("/regions")
-    public void getEntityRegion(@RequestBody Region region) {
-        regionRepository.;
+    @GetMapping("/regions/{regionId}")
+    public Region getEntityRegion(@PathVariable Long regionId) {
+        try {
+            return regionService.getRegion(regionId);
+        }catch (FestivalEntityNotFoundException e){
+            throw new RuntimeException("Region not found");
+        }
     }
 }

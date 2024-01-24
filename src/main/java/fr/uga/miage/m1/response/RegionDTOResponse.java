@@ -1,4 +1,4 @@
-package fr.uga.miage.m1.request;
+package fr.uga.miage.m1.response;
 
 import lombok.Builder;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class RegionDTORequest {
+public class RegionDTOResponse {
     Long regionId;
     String nomRegion;
 }

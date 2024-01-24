@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-01-23T18:08:47+0100",
+    date = "2024-01-24T01:45:00+0100",
     comments = "version: 1.6.0.Beta1, compiler: javac, environment: Java 17.0.6 (Oracle Corporation)"
 )
 @Component
@@ -21,6 +21,7 @@ public class RegionMapperImpl implements RegionMapper {
 
         Region region = new Region();
 
+        region.setRegionId( request.getRegionId() );
         region.setNomRegion( request.getNomRegion() );
 
         return region;
@@ -34,6 +35,7 @@ public class RegionMapperImpl implements RegionMapper {
 
         RegionDTORequest.RegionDTORequestBuilder regionDTORequest = RegionDTORequest.builder();
 
+        regionDTORequest.regionId( entity.getRegionId() );
         regionDTORequest.nomRegion( entity.getNomRegion() );
 
         return regionDTORequest.build();

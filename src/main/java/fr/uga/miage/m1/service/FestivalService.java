@@ -22,7 +22,7 @@ public class FestivalService {
     }
 
     public void createFestival(final FestivalDTORequest festivalDTORequest){
-
-        festivalRepository.save(festivalMapper.toEntity(festivalDTORequest));
+        Festival festival = FestivalMapper.INSTANCE.toEntity(festivalDTORequest);
+        festivalRepository.save(festival);
     }
 }

@@ -8,11 +8,29 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-01-23T18:08:47+0100",
+    date = "2024-01-24T09:48:56+0100",
     comments = "version: 1.6.0.Beta1, compiler: javac, environment: Java 17.0.6 (Oracle Corporation)"
 )
 @Component
 public class FestivalMapperImpl implements FestivalMapper {
+
+    @Override
+    public Festival toEntity(FestivalDTORequest request) {
+        if ( request == null ) {
+            return null;
+        }
+
+        Festival festival = new Festival();
+
+        festival.setFestivalId( request.getFestivalId() );
+        festival.setNomFestival( request.getNomFestival() );
+        festival.setTarif( request.getTarif() );
+        festival.setSiteWeb( request.getSiteWeb() );
+        festival.setLieuPrincipal( request.getLieuPrincipal() );
+        festival.setNombrePass( request.getNombrePass() );
+
+        return festival;
+    }
 
     @Override
     public FestivalDTOresponse toDto(Festival Festival) {
@@ -32,25 +50,5 @@ public class FestivalMapperImpl implements FestivalMapper {
         festivalDTOresponse.nombrePass( Festival.getNombrePass() );
 
         return festivalDTOresponse.build();
-    }
-
-    @Override
-    public Festival toEntity(FestivalDTORequest request) {
-        if ( request == null ) {
-            return null;
-        }
-
-        Festival festival = new Festival();
-
-        festival.setFestivalId( request.getFestivalId() );
-        festival.setNomFestival( request.getNomFestival() );
-        festival.setTarif( request.getTarif() );
-        festival.setSiteWeb( request.getSiteWeb() );
-        festival.setDateDebut( request.getDateDebut() );
-        festival.setDateFin( request.getDateFin() );
-        festival.setLieuPrincipal( request.getLieuPrincipal() );
-        festival.setNombrePass( request.getNombrePass() );
-
-        return festival;
     }
 }

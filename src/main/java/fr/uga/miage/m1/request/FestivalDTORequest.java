@@ -4,11 +4,15 @@ package fr.uga.miage.m1.request;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Data
 @Builder
+@Getter
+@Setter
 @Schema(description = "Correspond à la requête permettant de créer une entité test")
 public class FestivalDTORequest {
     @Schema(description = "correspond à l'Id du festival",example = "23")
@@ -22,12 +26,6 @@ public class FestivalDTORequest {
 
     @Schema(description = "correspond au site du festival",example = "www.alartlibre.com")
     String siteWeb;
-
-    @Schema(description = "correspond à la date du début du festival",example = "01/12/23")
-    LocalDate dateDebut;
-
-    @Schema(description = "correspond à la date de fin du festival",example = "09/12/23")
-    LocalDate dateFin;
 
     @Schema(description = "correspond au lieu principal du festival",example = "POITIERS")
     String lieuPrincipal;
