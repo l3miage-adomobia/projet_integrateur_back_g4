@@ -31,7 +31,7 @@ public class Festival {
     private LocalDate dateFin;
     @NotNull
     private String lieuPrincipal;
-    @NotNull
+
     private int nombrePass;
 
     @ManyToOne
