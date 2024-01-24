@@ -18,12 +18,10 @@ public class Festival {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFestival;
     @NotNull
-    @Column(length = 36)
     private String nomFestival;
     @NotNull
     private int tarif;
 
-    @Column(length = 50)
     private String siteWeb;
     @JsonFormat(pattern="dd/MM/yyyy")
     @NotNull
@@ -32,7 +30,6 @@ public class Festival {
     @NotNull
     private LocalDate dateFin;
     @NotNull
-    @Column(length = 36)
     private String lieuPrincipal;
     @NotNull
     private int nombrePass;

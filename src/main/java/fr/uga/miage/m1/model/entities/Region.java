@@ -11,7 +11,6 @@ import lombok.Setter;
 public class Region {
     @Id
     @NotNull
-    @Column(length = 36)
     private String nomRegion;
 
 }

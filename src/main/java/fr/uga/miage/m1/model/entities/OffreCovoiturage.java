@@ -21,7 +21,6 @@ public class OffreCovoiturage {
     private int nbPlacesOffertes;
 
     @NotNull
-    @Column(length = 36)
     private String modeleVoiture;
 
     @NotEmpty

@@ -17,7 +17,6 @@ public abstract class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUtilisateur;
 
-    @Column(length = 36)
     private String nom;
     @Email
     private String email;
