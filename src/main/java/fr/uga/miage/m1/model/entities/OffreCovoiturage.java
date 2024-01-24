@@ -14,17 +14,19 @@ import java.util.List;
 @Setter
 public class OffreCovoiturage {
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOffreDeCovoiturage;
+
     @NotNull
     private int nbPlacesOffertes;
+
     @NotNull
     @Column(length = 36)
     private String modeleVoiture;
 
     @NotEmpty
-    @OneToMany
-    private Collection<Etape> etapes;
+    @OneToMany(mappedBy = "offreCovoiturage")
+    private List<Etape> etapes;
 
     @ManyToOne
     @JoinColumn(name = "FK_idFestival", referencedColumnName = "idFestival")

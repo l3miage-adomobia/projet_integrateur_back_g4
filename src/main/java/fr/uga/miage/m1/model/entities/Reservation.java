@@ -12,8 +12,8 @@ public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
     private Long idReservation;
+
     @NotNull
     private int nbPlaces;
 

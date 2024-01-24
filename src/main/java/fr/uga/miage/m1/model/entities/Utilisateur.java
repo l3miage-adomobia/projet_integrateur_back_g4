@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,5 +23,5 @@ public abstract class Utilisateur {
     private String email;
 
     @OneToMany(mappedBy ="festivalier")
-    private Collection<Panier> paniers;
+    private List<Panier> paniers;
 }

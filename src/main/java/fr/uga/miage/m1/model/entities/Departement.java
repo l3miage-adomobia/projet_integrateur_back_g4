@@ -10,7 +10,6 @@ import lombok.Setter;
 @Setter
 public class Departement {
     @Id
-    @NotNull
     private int noDepartement;
     @NotNull
     @Column(length = 50)

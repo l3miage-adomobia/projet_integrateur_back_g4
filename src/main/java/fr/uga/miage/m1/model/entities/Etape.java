@@ -12,7 +12,6 @@ public class Etape {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
     private Long idEtape;
 
     @NotNull

@@ -13,7 +13,6 @@ import java.util.List;
 public class ArretCovoiturage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
     private Long idArret;
     @NotNull
     @Column(length=36)

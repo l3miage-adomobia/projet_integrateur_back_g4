@@ -7,20 +7,22 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 public class Panier {
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idPanier;
+
     @NotNull
     private Boolean valide;
 
     @NotEmpty
-    @OneToMany
-    private Collection<Reservation> reservations;
+    @OneToMany(mappedBy ="panier")
+    private List<Reservation> reservations;
 
     @ManyToOne
     @JoinColumn(name = "FK_idFestivalier", referencedColumnName = "idUtilisateur")
