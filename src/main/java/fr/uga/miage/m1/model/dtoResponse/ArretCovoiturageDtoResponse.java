@@ -1,7 +1,6 @@
-package fr.uga.miage.m1.model.dto;
+package fr.uga.miage.m1.model.dtoResponse;
 
 import fr.uga.miage.m1.model.entities.ArretCovoiturage;
-import fr.uga.miage.m1.model.entities.Lieu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ArretCovoiturageDto {
+public class ArretCovoiturageDtoResponse {
 
     private Long idArret;
     private String nomLieu;
@@ -18,7 +17,7 @@ public class ArretCovoiturageDto {
     private Double latitude;
     private Long lieuCodeInsee;
 
-    public ArretCovoiturageDto(ArretCovoiturage arretCovoiturage){
+    public ArretCovoiturageDtoResponse(ArretCovoiturage arretCovoiturage){
         this.idArret = arretCovoiturage.getIdArret();
         this.nomLieu = arretCovoiturage.getNomLieu();
         this.adresseLieu = arretCovoiturage.getAdresseLieu();

@@ -9,6 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Domaine {
+
     @Id
     @NotNull
     private String nomDomaine;
