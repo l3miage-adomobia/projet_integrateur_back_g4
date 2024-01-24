@@ -48,5 +48,5 @@ public class Festival {
     private SousDomaine sousDomaine;
 
     @OneToMany(mappedBy ="festival")
-    private Collection<OffreCovoiturage> covoiturages;
+    private List<OffreCovoiturage> covoiturages;
 }

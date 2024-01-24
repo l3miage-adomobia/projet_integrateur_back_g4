@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6d2a05a0-0f75-4cec-a8a3-9108b22819df" name="Changes" comment="[Mapping] Constraints size annotations done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Departement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Etape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Etape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Festival.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Panier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uga/miage/m1/model/entities/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
