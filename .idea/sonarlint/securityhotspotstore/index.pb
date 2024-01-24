@@ -9,7 +9,3 @@ r
 Bsrc/main/java/fr/uga/miage/m1/model/entities/ArretCovoiturage.java,c/7/c7f44177543c5a9a76250149b0dc248a169ae273
 r
 Bsrc/main/java/fr/uga/miage/m1/model/entities/OffreCovoiturage.java,c/3/c3c38307e5be3be4e8f8d05786ae03c03ca24c18
-h
-8src/main/java/fr/uga/miage/m1/model/entities/AEtape.java,d/9/d96a91962a386db09e1d613537fc69a9465c709f
-j
-:src/main/java/fr/uga/miage/m1/model/entities/AEtapeId.java,9/5/95539c349b60528ee278cf36b9f663f5d440d293
