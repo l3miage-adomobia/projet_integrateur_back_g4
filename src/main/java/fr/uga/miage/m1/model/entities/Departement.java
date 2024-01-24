@@ -12,7 +12,6 @@ public class Departement {
     @Id
     private int noDepartement;
     @NotNull
-    @Column(length = 50)
     private String nomDepartement;
     @ManyToOne
     @JoinColumn(name = "FK_nomRegion", referencedColumnName = "nomRegion")

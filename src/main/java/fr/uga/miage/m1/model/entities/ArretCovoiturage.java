@@ -15,9 +15,7 @@ public class ArretCovoiturage {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idArret;
     @NotNull
-    @Column(length=36)
     private String nomLieu;
-    @Column(length=50)
     private String adresseLieu;
     @NotNull
     private Double longitude;

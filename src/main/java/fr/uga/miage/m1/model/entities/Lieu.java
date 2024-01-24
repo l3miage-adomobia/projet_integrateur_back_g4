@@ -15,7 +15,6 @@ public class Lieu {
     @NotNull
     private int codePostal;
     @NotNull
-    @Column(length = 36)
     private String nomCommune;
 
     @NotNull
