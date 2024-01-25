@@ -7,21 +7,23 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @CrossOrigin
 @Tag(name ="Festival controller")
 @RestController
-@RequestMapping("/api/festival")
+@RequestMapping("/api/festivals")
 public class FestivalController {
      private final FestivalService festivalService;
 
      public FestivalController(FestivalService s){
           this.festivalService = s;
      }
+
      @GetMapping()
-     public ResponseEntity<List<FestivalDtoResponse>> getAllDomaine(){
-          List<FestivalDtoResponse> domaineList = festivalService.findAll();
+     public ResponseEntity<List<FestivalDtoResponse>> findFirst10Festivals(){
+          List<FestivalDtoResponse> domaineList = festivalService.findFirst10Festivals();
           return ResponseEntity.ok().body(domaineList);
      }
 
@@ -34,5 +36,19 @@ public class FestivalController {
                // Gestion des exceptions
                return ResponseEntity.badRequest().body(e.getMessage());
           }
+     }
+
+
+     //get tous les festivals avec une date de début superieur ou égal à “dateDebut”
+     @GetMapping("{dateDebut}")
+     public ResponseEntity<List<FestivalDtoResponse>> getFestivalsByDateDebut(@PathVariable final LocalDate dateDebut){
+          List<FestivalDtoResponse> festivalList = festivalService.findFestivalsByDateDebut(dateDebut);
+          return ResponseEntity.ok().body(festivalList);
+     }
+
+     @GetMapping("{nomFestival}")
+     public ResponseEntity<List<FestivalDtoResponse>> getFestivalsByDateDebut(@PathVariable final String nomFestival){
+          List<FestivalDtoResponse> festivalList = festivalService.findFestivalsByNomFestival(nomFestival);
+          return ResponseEntity.ok().body(festivalList);
      }
 }

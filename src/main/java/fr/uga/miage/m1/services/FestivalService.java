@@ -6,6 +6,7 @@ import fr.uga.miage.m1.repository.FestivalRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +16,8 @@ public class FestivalService {
 
     private final FestivalRepository festivalRepository;
 
-    public List<FestivalDtoResponse> findAll(){
-        List<Festival> f = festivalRepository.findAll();
+    public List<FestivalDtoResponse> findFirst10Festivals(){
+        List<Festival> f = festivalRepository.findFirst10Festivals();
         List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
@@ -29,4 +30,18 @@ public class FestivalService {
         festivalRepository.save(festival);
     }
 
+
+    public List<FestivalDtoResponse> findFestivalsByDateDebut(LocalDate dateDebut) {
+        List<Festival> f = festivalRepository.getFestivalsByDateDebut(dateDebut);
+        List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
+        f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
+        return festivalDtoResponses;
+    }
+
+    public List<FestivalDtoResponse> findFestivalsByNomFestival(String nomFestival) {
+        List<Festival> f = festivalRepository.getFestivalsByNomFestival(nomFestival);
+        List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
+        f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
+        return festivalDtoResponses;
+    }
 }
