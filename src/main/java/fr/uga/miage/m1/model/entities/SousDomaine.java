@@ -14,7 +14,6 @@ public class SousDomaine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSousDomaine;
 
-    @NotNull
     private String nomSousDomaine;
 
     @NotNull
