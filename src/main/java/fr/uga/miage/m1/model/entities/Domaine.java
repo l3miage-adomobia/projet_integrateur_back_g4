@@ -9,8 +9,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Domaine {
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idDomaine;
+
     @NotNull
     private String nomDomaine;
 

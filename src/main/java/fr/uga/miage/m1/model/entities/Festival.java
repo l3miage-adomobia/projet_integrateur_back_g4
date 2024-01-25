@@ -38,12 +38,12 @@ public class Festival {
 
 
     @ManyToOne
-    @JoinColumn(name = "FK_codeInsee", referencedColumnName = "codeInsee")
+    @JoinColumn(name = "FK_idLieu", referencedColumnName = "idLieu")
     @NotNull
     private Lieu lieu;
 
     @ManyToOne
-    @JoinColumn(name = "FK_nomSousDomaine", referencedColumnName = "nomSousDomaine")
+    @JoinColumn(name = "FK_idSousDomaine", referencedColumnName = "idSousDomaine")
     @NotNull
     private SousDomaine sousDomaine;
 

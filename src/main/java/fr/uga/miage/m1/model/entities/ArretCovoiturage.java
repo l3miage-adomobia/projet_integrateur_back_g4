@@ -23,7 +23,7 @@ public class ArretCovoiturage {
     private Double latitude;
 
     @ManyToOne
-    @JoinColumn(name = "FK_codeInsee", referencedColumnName = "codeInsee")
+    @JoinColumn(name = "FK_idLieu", referencedColumnName = "idLieu")
     @NotNull
     private Lieu lieu;
 
