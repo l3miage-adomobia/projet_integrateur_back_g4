@@ -3,6 +3,7 @@ package fr.uga.miage.m1.model.entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Null;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,7 +33,9 @@ public class Festival {
     @NotNull
     private String lieuPrincipal;
 
+    @NotNull
     private int nombrePass;
+
 
     @ManyToOne
     @JoinColumn(name = "FK_codeInsee", referencedColumnName = "codeInsee")
