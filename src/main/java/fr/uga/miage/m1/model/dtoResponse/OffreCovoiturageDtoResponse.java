@@ -15,14 +15,14 @@ public class OffreCovoiturageDtoResponse {
     private String modeleVoiture;
     private List<EtapeDtoResponse> etapes;
     private Long festivalId;
-    private Long covoitureurId;
+    //private Long covoitureurId;
 
     public OffreCovoiturageDtoResponse(OffreCovoiturage offreCovoiturage){
         this.idOffreDeCovoiturage = offreCovoiturage.getIdOffreDeCovoiturage();
         this.nbPlacesOffertes = offreCovoiturage.getNbPlacesOffertes();
         this.modeleVoiture = offreCovoiturage.getModeleVoiture();
         offreCovoiturage.getEtapes().forEach(e-> this.etapes.add(new EtapeDtoResponse(e)));
-        this.covoitureurId = offreCovoiturage.getCovoitureur().getIdUtilisateur();
+      //  this.covoitureurId = offreCovoiturage.getCovoitureur().getIdUtilisateur();
     }
 
 }

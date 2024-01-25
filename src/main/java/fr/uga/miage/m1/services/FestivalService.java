@@ -21,5 +21,12 @@ public class FestivalService {
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
     }
+    public void addPlacesToFestival(Long idFestival, int nombrePlacesAjouter) throws Exception {
+        Festival festival = festivalRepository.findById(idFestival)
+                .orElseThrow(() -> new Exception("Festival non trouvé"));
+
+        festival.setNombrePass(festival.getNombrePass() + nombrePlacesAjouter);
+        festivalRepository.save(festival);
+    }
 
 }

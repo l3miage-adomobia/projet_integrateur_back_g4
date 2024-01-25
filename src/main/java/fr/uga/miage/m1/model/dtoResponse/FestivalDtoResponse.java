@@ -37,6 +37,6 @@ public class FestivalDtoResponse {
         this.lieuPrincipal = festival.getLieuPrincipal();
         this.domaine = festival.getSousDomaine().getDomaine().getNomDomaine();
         this.nomSousDomaine = festival.getSousDomaine().getNomSousDomaine();
-        //festival.getCovoiturages().forEach(covoit -> this.offreCovoiturageDtos.add(new OffreCovoiturageDtoResponse(covoit)));
+        festival.getCovoiturages().forEach(covoit -> this.offreCovoiturageDtos.add(new OffreCovoiturageDtoResponse(covoit)));
     }
 }
