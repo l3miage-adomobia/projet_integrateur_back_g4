@@ -11,6 +11,8 @@ import lombok.Setter;
 @Setter
 public class SousDomaine {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idSousDomaine;
     @NotNull
     private String nomSousDomaine;
     @JoinColumn(name = "FK_nomDomaine", referencedColumnName = "nomDomaine")

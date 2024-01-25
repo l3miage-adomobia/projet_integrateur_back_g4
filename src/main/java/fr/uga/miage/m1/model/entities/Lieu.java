@@ -10,21 +10,21 @@ import lombok.Setter;
 @Setter
 public class Lieu {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idLieu;
+
     @NotNull
     private Long codeInsee;
-    @NotNull
     private int codePostal;
-    @NotNull
     private String nomCommune;
 
     @NotNull
-    private Double longitudeCommune;
+    private Double longitude;
     @NotNull
-    private Double latitudeCommune;
+    private Double latitude;
 
     @ManyToOne
-    @JoinColumn(name = "FK_noDepartement", referencedColumnName = "noDepartement")
-    @NotNull
+    @JoinColumn(name = "FK_idDepartement", referencedColumnName = "idDepartement")
     private Departement departement;
 
 }
