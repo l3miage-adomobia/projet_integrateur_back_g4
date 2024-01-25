@@ -5,6 +5,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalTime;
+
 @Entity
 @Getter
 @Setter
@@ -19,6 +21,9 @@ public class Etape {
 
     @NotNull
     private int duree;
+
+    @NotNull
+    private LocalTime heureDepart;
 
     @ManyToOne
     @JoinColumn(name = "FK_depart", referencedColumnName = "idArret")
