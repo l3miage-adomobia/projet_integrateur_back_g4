@@ -1,8 +1,6 @@
 package fr.uga.miage.m1.services;
 
-import fr.uga.miage.m1.model.entities.Domaine;
 import fr.uga.miage.m1.model.entities.SousDomaine;
-import fr.uga.miage.m1.repository.DomaineRepository;
 import fr.uga.miage.m1.repository.SousDomaineRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

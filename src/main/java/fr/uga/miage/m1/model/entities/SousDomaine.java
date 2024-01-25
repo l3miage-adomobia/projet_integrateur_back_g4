@@ -17,9 +17,7 @@ public class SousDomaine {
     @NotNull
     private String nomSousDomaine;
 
-    @JoinColumn(name = "FK_idDomaine", referencedColumnName = "idDomaine")
     @NotNull
-    @ManyToOne
-    private Domaine domaine;
+    private String  nomDomaine;
 
 }
