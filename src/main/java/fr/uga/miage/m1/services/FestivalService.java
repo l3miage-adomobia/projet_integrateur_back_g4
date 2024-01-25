@@ -22,6 +22,14 @@ public class FestivalService {
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
     }
+
+    public List<FestivalDtoResponse> find10FestivalsByPage(int pageNumber){
+        List<Festival> f = festivalRepository.find10FestivalsByPage(pageNumber);
+        List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
+        f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
+        return festivalDtoResponses;
+    }
+
     public void addPlacesToFestival(Long idFestival, int nombrePlacesAjouter) throws Exception {
         Festival festival = festivalRepository.findById(idFestival)
                 .orElseThrow(() -> new Exception("Festival non trouvé"));

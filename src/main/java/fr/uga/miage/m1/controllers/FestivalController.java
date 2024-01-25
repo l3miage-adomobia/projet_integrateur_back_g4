@@ -13,7 +13,7 @@ import java.util.List;
 @CrossOrigin
 @Tag(name ="Festival controller")
 @RestController
-@RequestMapping("/api/festivals")
+@RequestMapping("api/festivals")
 public class FestivalController {
      private final FestivalService festivalService;
 
@@ -24,6 +24,12 @@ public class FestivalController {
      @GetMapping()
      public ResponseEntity<List<FestivalDtoResponse>> findFirst10Festivals(){
           List<FestivalDtoResponse> domaineList = festivalService.findFirst10Festivals();
+          return ResponseEntity.ok().body(domaineList);
+     }
+
+     @GetMapping("/page/{pageNumber}")
+     public ResponseEntity<List<FestivalDtoResponse>> find10FestivalsByPage(@PathVariable final int pageNumber){
+          List<FestivalDtoResponse> domaineList = festivalService.find10FestivalsByPage(pageNumber);
           return ResponseEntity.ok().body(domaineList);
      }
 
