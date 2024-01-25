@@ -10,8 +10,11 @@ import lombok.Setter;
 @Setter
 public class Departement {
     @Id
-    private Integer noDepartement;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idDepartement;
+    private int noDepartement;
     @NotNull
+    @Column(unique=true)
     private String nomDepartement;
     @ManyToOne
     @JoinColumn(name = "FK_nomRegion", referencedColumnName = "nomRegion")
