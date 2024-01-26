@@ -46,15 +46,15 @@ public class FestivalController {
 
 
      //get tous les festivals avec une date de début superieur ou égal à “dateDebut”
-     @GetMapping("{dateDebut}")
+     @GetMapping("/filtre/date/{dateDebut}")
      public ResponseEntity<List<FestivalDtoResponse>> getFestivalsByDateDebut(@PathVariable final LocalDate dateDebut){
           List<FestivalDtoResponse> festivalList = festivalService.findFestivalsByDateDebut(dateDebut);
           return ResponseEntity.ok().body(festivalList);
      }
 
-     @GetMapping("{nomFestival}")
-     public ResponseEntity<List<FestivalDtoResponse>> getFestivalsByDateDebut(@PathVariable final String nomFestival){
-          List<FestivalDtoResponse> festivalList = festivalService.findFestivalsByNomFestival(nomFestival);
+     @GetMapping("/filtre/nom/{partOfFestName}")
+     public ResponseEntity<List<FestivalDtoResponse>> getFestivalsByDateDebut(@PathVariable final String partOfFestName){
+          List<FestivalDtoResponse> festivalList = festivalService.findFestivalsByNomFestival(partOfFestName);
           return ResponseEntity.ok().body(festivalList);
      }
 }

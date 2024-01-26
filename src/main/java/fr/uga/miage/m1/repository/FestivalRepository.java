@@ -18,6 +18,8 @@ public interface FestivalRepository extends JpaRepository<Festival,Long> {
     List<Festival> find10FestivalsByPage(@Param("p")  int pageNumber );
 
 
-    List<Festival> getFestivalsByDateDebut(LocalDate dateDebut);
-    List<Festival> getFestivalsByNomFestival(String nomFestival);
+    //@Query(value = "SELECT * FROM festival WHERE DATE_DEBUT >= :d", nativeQuery = true)
+    List<Festival> getAllByDateDebut(@Param("d") LocalDate dateDebut);
+    @Query(value = "SELECT * FROM Festival WHERE nom_festival LIKE %:pof%", nativeQuery = true)
+    List<Festival> getAllByNomFestival(@Param("pof") String partOfFestName);
 }

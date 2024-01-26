@@ -40,14 +40,14 @@ public class FestivalService {
 
 
     public List<FestivalDtoResponse> findFestivalsByDateDebut(LocalDate dateDebut) {
-        List<Festival> f = festivalRepository.getFestivalsByDateDebut(dateDebut);
+        List<Festival> f = festivalRepository.getAllByDateDebut(dateDebut);
         List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
     }
 
-    public List<FestivalDtoResponse> findFestivalsByNomFestival(String nomFestival) {
-        List<Festival> f = festivalRepository.getFestivalsByNomFestival(nomFestival);
+    public List<FestivalDtoResponse> findFestivalsByNomFestival(String partOfFestName) {
+        List<Festival> f = festivalRepository.getAllByNomFestival(partOfFestName);
         List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
