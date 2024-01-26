@@ -57,4 +57,7 @@ public class FestivalController {
           List<FestivalDtoResponse> festivalList = festivalService.findFestivalsByNomFestival(partOfFestName);
           return ResponseEntity.ok().body(festivalList);
      }
+
+
+
 }

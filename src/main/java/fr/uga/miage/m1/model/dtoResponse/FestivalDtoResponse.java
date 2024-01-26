@@ -25,7 +25,6 @@ public class FestivalDtoResponse {
     private Long lieuCodeInsee;
     private String nomSousDomaine;
     private String domaine;
-    private List<OffreCovoiturageDtoResponse> offreCovoiturageDtos = new ArrayList<>();
 
     public FestivalDtoResponse(Festival festival){
         this.idFestival = festival.getIdFestival();
@@ -37,6 +36,5 @@ public class FestivalDtoResponse {
         this.lieuPrincipal = festival.getLieuPrincipal();
         this.domaine = festival.getSousDomaine().getNomDomaine();
         this.nomSousDomaine = festival.getSousDomaine().getNomSousDomaine();
-        festival.getCovoiturages().forEach(covoit -> this.offreCovoiturageDtos.add(new OffreCovoiturageDtoResponse(covoit)));
     }
 }

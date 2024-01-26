@@ -1,12 +1,17 @@
 package fr.uga.miage.m1.services;
 
 import fr.uga.miage.m1.model.dtoRequest.OffreCovoiturageRequest;
+import fr.uga.miage.m1.model.dtoResponse.FestivalDtoResponse;
+import fr.uga.miage.m1.model.dtoResponse.OffreCovoiturageDtoResponse;
 import fr.uga.miage.m1.model.entities.Festival;
 import fr.uga.miage.m1.model.entities.OffreCovoiturage;
 import fr.uga.miage.m1.repository.FestivalRepository;
 import fr.uga.miage.m1.repository.OffreCovoiturageRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -36,4 +41,12 @@ public class OffreCovoiturageService {
 
         }
 
+        /*
+        public List<OffreCovoiturageDtoResponse> getOffreCovoiturageByFestivalId(Long idFestival) {
+            List<OffreCovoiturage> c = offreCovoiturageRepository.getOffreCovoiturageByFestivalId(idFestival);
+            List<OffreCovoiturageDtoResponse> offreCovoiturageDtoResponse = new ArrayList<>();
+            c.forEach(covoiturage -> offreCovoiturageDtoResponse.add(new OffreCovoiturageDtoResponse(covoiturage)));
+            return offreCovoiturageDtoResponse;
+        }
+        */
 }
