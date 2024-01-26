@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @CrossOrigin
 @Tag(name ="Offre Covoiturage controller")
-@RequestMapping("/Offrescovoiturages")
+@RequestMapping("api/covoiturages")
 public class OffreCovoiturageController {
 
     private final OffreCovoiturageService covoiturageService;
@@ -23,7 +23,7 @@ public class OffreCovoiturageController {
         this.covoiturageService = covoiturageService;
     }
 
-
+/*
     @PostMapping
     public ResponseEntity<?> createCovoiturage(@RequestBody OffreCovoiturageRequest request) {
         try {
@@ -33,12 +33,12 @@ public class OffreCovoiturageController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+*/
 
-    /*
     @GetMapping("/festival/{idFestival}")
-    public ResponseEntity<List<OffreCovoiturageDtoResponse>> getOffreCovoiturageByFestivalId(@PathVariable final Long idFestival){
-        List<OffreCovoiturageDtoResponse> offreCovoiturageList = covoiturageService.getOffreCovoiturageByFestivalId(idFestival);
+    public ResponseEntity<List<OffreCovoiturageDtoResponse>> getAllOffreCovoiturageByFestivalId(@PathVariable final Long idFestival){
+        List<OffreCovoiturageDtoResponse> offreCovoiturageList = covoiturageService.getAllOffreCovoiturageByFestivalId(idFestival);
         return ResponseEntity.ok().body(offreCovoiturageList);
     }
-    */
+
 }

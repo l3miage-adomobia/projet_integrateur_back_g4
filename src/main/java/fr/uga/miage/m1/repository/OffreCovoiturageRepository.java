@@ -12,9 +12,9 @@ import java.util.List;
 @Repository
 public interface OffreCovoiturageRepository extends JpaRepository<OffreCovoiturage,Long> {
 
-/*
-    @Query(value = "", nativeQuery = true)
-    List<OffreCovoiturage> getOffreCovoiturageByFestivalId(@Param("idF") Long idFestival);
-*/
+
+    @Query(value = "SELECT * FROM offre_covoiturage WHERE FK_ID_FESTIVAL = :f ", nativeQuery = true)
+    List<OffreCovoiturage> getAllOffreCovoiturageByIdFestival(@Param("f") Long idFestival);
+
 
 }

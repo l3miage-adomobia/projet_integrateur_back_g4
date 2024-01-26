@@ -14,14 +14,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class OffreCovoiturageService {
 
         private OffreCovoiturageRepository offreCovoiturageRepository;
-        private FestivalRepository festivalRepository;
+
+        OffreCovoiturageService(OffreCovoiturageRepository offreCovoiturageRepository){
+            this.offreCovoiturageRepository=offreCovoiturageRepository;
+        }
+
+//        private FestivalRepository festivalRepository;
 
         // Ajouter d'autres repositories si nécessaire, par exemple, pour Etape
-
+/*
         public void createCovoiturage(OffreCovoiturageRequest request) throws Exception {
             Festival festival = festivalRepository.findById(request.getIdFestival())
                     .orElseThrow(() -> new Exception("Festival non trouvé"));
@@ -40,13 +44,13 @@ public class OffreCovoiturageService {
             offreCovoiturageRepository.save(offreCovoiturage);
 
         }
+*/
 
-        /*
-        public List<OffreCovoiturageDtoResponse> getOffreCovoiturageByFestivalId(Long idFestival) {
-            List<OffreCovoiturage> c = offreCovoiturageRepository.getOffreCovoiturageByFestivalId(idFestival);
+        public List<OffreCovoiturageDtoResponse> getAllOffreCovoiturageByFestivalId(Long idFestival) {
+            List<OffreCovoiturage> c = offreCovoiturageRepository.getAllOffreCovoiturageByIdFestival(idFestival);
             List<OffreCovoiturageDtoResponse> offreCovoiturageDtoResponse = new ArrayList<>();
             c.forEach(covoiturage -> offreCovoiturageDtoResponse.add(new OffreCovoiturageDtoResponse(covoiturage)));
             return offreCovoiturageDtoResponse;
         }
-        */
+
 }
