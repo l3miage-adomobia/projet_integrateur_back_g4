@@ -52,4 +52,14 @@ public class FestivalService {
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
     }
+
+
+    public List<FestivalDtoResponse> getAllFestivalsByMultipleFilters(String partOfFestName, LocalDate date, Long insee, String sousdomaine) {
+        List<Festival> f = festivalRepository.getAllFestivalsByMultipleFilters(partOfFestName, date, insee, sousdomaine);
+        List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
+        f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
+        return festivalDtoResponses;
+    }
+
+
 }

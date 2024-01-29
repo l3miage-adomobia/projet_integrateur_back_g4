@@ -22,4 +22,27 @@ public interface FestivalRepository extends JpaRepository<Festival,Long> {
     List<Festival> getAllByDateDebut(@Param("d") LocalDate dateDebut);
     @Query(value = "SELECT * FROM Festival WHERE nom_festival LIKE %:pof%", nativeQuery = true)
     List<Festival> getAllByNomFestival(@Param("pof") String partOfFestName);
+
+
+
+    @Query(value = "SELECT * " +
+            "FROM festival f " +
+            "join LIEU l ON f.fk_id_lieu=l.id_lieu " +
+            "join SOUS_DOMAINE s ON f.fk_id_sous_domaine=s.id_sous_domaine " +
+            "WHERE (:fn IS Null OR NOM_FESTIVAL = :fn) " +
+            "AND (:d IS Null OR DATE_DEBUT = :d) " +
+            "AND (:i IS Null OR l.code_insee = :i) " +
+            "AND (:sd IS Null  OR s.nom_sous_domaine= :sd)", nativeQuery = true)
+    List<Festival> getAllFestivalsByMultipleFilters(@Param("fn") String partOfFestName, @Param("d") LocalDate date, @Param("i") Long insee, @Param("sd") String sousdomaine);
+
+    /*
+    SELECT *
+    FROM fetival f
+    left join LIEU l ON f.fk_id_lieu=l.id_lieu
+    left join SOUS_DOMAINE s ON l.fk_id_sous_domaine=s.id_sous_domaine
+    WHERE (NOM_FESTIVAL = :fn OR :fn IS Null)
+    AND (DATE_DEBUT = :d OR :d IS Null)
+    AND (l.code_insee = :i OR :i IS Null)
+    AND ( s.nom_sous_domaine= :sd OR :sd IS Null)
+    */
 }

@@ -60,4 +60,11 @@ public class FestivalController {
 
 
 
+
+     @GetMapping("/filtres")
+     public ResponseEntity<List<FestivalDtoResponse>> getAllFestivalsByMultipleFilters(@RequestParam(required = false) final String partOfFestName,@RequestParam(required = false) final LocalDate date,@RequestParam(required = false) final Long insee, @RequestParam(required = false) final String sousdomaine){
+          List<FestivalDtoResponse> festivalList = festivalService.getAllFestivalsByMultipleFilters(partOfFestName, date, insee, sousdomaine);
+          return ResponseEntity.ok().body(festivalList);
+     }
+
 }
