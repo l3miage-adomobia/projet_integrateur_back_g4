@@ -47,7 +47,8 @@ public class FestivalService {
     }
 
     public List<FestivalDtoResponse> findFestivalsByNomFestival(String partOfFestName) {
-        List<Festival> f = festivalRepository.getAllByNomFestival(partOfFestName);
+        String partOfFestNameLowerCase = partOfFestName.toLowerCase();
+        List<Festival> f = festivalRepository.getAllByNomFestival(partOfFestNameLowerCase);
         List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
@@ -55,7 +56,9 @@ public class FestivalService {
 
 
     public List<FestivalDtoResponse> getAllFestivalsByMultipleFilters(String partOfFestName, LocalDate date, Long insee, String sousdomaine) {
-        List<Festival> f = festivalRepository.getAllFestivalsByMultipleFilters(partOfFestName, date, insee, sousdomaine);
+        String partOfFestNameLowerCase = (partOfFestName!=null) ? partOfFestName.toLowerCase() : null;
+        String sousdomaineLowerCase = (sousdomaine!=null) ? sousdomaine.toLowerCase() : null;
+        List<Festival> f = festivalRepository.getAllFestivalsByMultipleFilters(partOfFestNameLowerCase, date, insee, sousdomaineLowerCase);
         List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
