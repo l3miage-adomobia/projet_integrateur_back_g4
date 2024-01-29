@@ -4,6 +4,7 @@ import fr.uga.miage.m1.model.dtoResponse.FestivalDtoResponse;
 import fr.uga.miage.m1.model.entities.Festival;
 import fr.uga.miage.m1.repository.FestivalRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -55,10 +56,11 @@ public class FestivalService {
     }
 
 
-    public List<FestivalDtoResponse> getAllFestivalsByMultipleFilters(String partOfFestName, LocalDate date, Long insee, String sousdomaine) {
+    public List<FestivalDtoResponse> getAllFestivalsByMultipleFilters(String partOfFestName, LocalDate date, Long insee, String sousdomaine, String nomCommune) {
         String partOfFestNameLowerCase = (partOfFestName!=null) ? partOfFestName.toLowerCase() : null;
         String sousdomaineLowerCase = (sousdomaine!=null) ? sousdomaine.toLowerCase() : null;
-        List<Festival> f = festivalRepository.getAllFestivalsByMultipleFilters(partOfFestNameLowerCase, date, insee, sousdomaineLowerCase);
+        String nomCommuneLowerCase = (nomCommune!=null) ? nomCommune.toLowerCase() : null;
+        List<Festival> f = festivalRepository.getAllFestivalsByMultipleFilters(partOfFestNameLowerCase, date, insee, sousdomaineLowerCase, nomCommuneLowerCase);
         List<FestivalDtoResponse> festivalDtoResponses = new ArrayList<>();
         f.forEach(festival -> festivalDtoResponses.add(new FestivalDtoResponse(festival)));
         return festivalDtoResponses;
