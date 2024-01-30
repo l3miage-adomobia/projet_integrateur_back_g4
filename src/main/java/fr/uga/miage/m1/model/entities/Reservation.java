@@ -27,4 +27,9 @@ public class Reservation {
     @NotNull
     private Panier panier;
 
+    public Reservation(int nbPlaces, Etape trajet, Panier panier){
+        this.nbPlaces = nbPlaces;
+        this.trajet = trajet;
+        this.panier = panier;
+    }
 }

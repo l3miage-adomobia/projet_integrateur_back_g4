@@ -13,6 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 public class Panier {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPanier;
@@ -30,5 +31,9 @@ public class Panier {
     private Utilisateur festivalier;
 
 
+    public Panier(Utilisateur festivalier, Boolean valide){
+        this.festivalier = festivalier;
+        this.valide = false;
+    }
 
 }
