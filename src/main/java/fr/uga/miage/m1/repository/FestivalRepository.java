@@ -26,6 +26,8 @@ public interface FestivalRepository extends JpaRepository<Festival,Long> {
 
 
     @Query(value =
+            "SELECT * FROM (" +
+                    "" +
             "SELECT DISTINCT f.* " +
                     "FROM festival f " +
                     "join LIEU l ON f.fk_id_lieu=l.id_lieu " +
@@ -36,9 +38,10 @@ public interface FestivalRepository extends JpaRepository<Festival,Long> {
                     "join LIEU lc ON ac.fk_id_lieu=lc.id_lieu " +
                     "WHERE (:fn IS Null OR LOWER(NOM_FESTIVAL) LIKE %:fn%) " +
                     "AND (:d IS Null OR DATE_DEBUT = :d) " +
-                    "AND (:i IS Null OR l.code_insee = :i) " +
+                    "AND (:ncf IS Null OR LOWER(l.nom_commune) LIKE %:ncf%) " +
                     "AND (:sd IS Null  OR LOWER(s.nom_sous_domaine) LIKE %:sd%) " +
-                    "AND (:nc IS Null OR LOWER(lc.nom_commune) LIKE %:nc%)"
+                    "AND (:nc IS Null OR LOWER(lc.nom_commune) LIKE %:nc%) " +
+                    ") OFFSET 10*(:p-1) ROWS FETCH FIRST 10 ROWS ONLY"
             , nativeQuery = true)
-    List<Festival> getAllFestivalsByMultipleFilters(@Param("fn") String partOfFestName, @Param("d") LocalDate date, @Param("i") Long insee, @Param("sd") String sousdomaine, @Param("nc") String nomCommune);
+    List<Festival> getAllFestivalsByMultipleFilters(@Param("fn") String partOfFestName, @Param("d") LocalDate date, @Param("ncf") String nomCommuneFest, @Param("sd") String sousdomaine, @Param("nc") String nomCommuneArr, @Param("p") int page);
 }

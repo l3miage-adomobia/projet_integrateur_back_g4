@@ -24,10 +24,10 @@ public class Festival {
     private int tarif;
 
     private String siteWeb;
-    @JsonFormat(pattern="dd/MM/yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @NotNull
     private LocalDate dateDebut;
-    @JsonFormat(pattern="dd/MM/yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @NotNull
     private LocalDate dateFin;
     @NotNull
