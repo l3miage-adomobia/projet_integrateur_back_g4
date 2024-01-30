@@ -15,6 +15,7 @@ public class Lieu {
 
     @NotNull
     private Long codeInsee;
+    @Column(nullable = true)
     private int codePostal;
     private String nomCommune;
 

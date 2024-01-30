@@ -21,7 +21,8 @@ public class ArretCovoiturage {
     private Double longitude;
     @NotNull
     private Double latitude;
-
+    @NotNull
+    private String typeArret;
     @ManyToOne
     @JoinColumn(name = "FK_idLieu", referencedColumnName = "idLieu")
     @NotNull
