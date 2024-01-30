@@ -19,15 +19,12 @@ public abstract class Utilisateur {
     private Long idUtilisateur;
 
     private String nom;
-
-
     @Email
     @Column(unique = true)
     private String email;
 
     @NotNull
     private String typeUtilisateur;
-
     @OneToMany(mappedBy ="festivalier")
     private List<Panier> paniers;
 }
