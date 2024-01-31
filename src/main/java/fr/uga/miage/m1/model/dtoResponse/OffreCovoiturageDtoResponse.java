@@ -3,6 +3,7 @@ package fr.uga.miage.m1.model.dtoResponse;
 import fr.uga.miage.m1.model.entities.OffreCovoiturage;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -21,6 +22,7 @@ public class OffreCovoiturageDtoResponse {
         this.idOffreDeCovoiturage = offreCovoiturage.getIdOffreDeCovoiturage();
         this.nbPlacesOffertes = offreCovoiturage.getNbPlacesOffertes();
         this.modeleVoiture = offreCovoiturage.getModeleVoiture();
+        this.etapes = new ArrayList<>();
         offreCovoiturage.getEtapes().forEach(e-> this.etapes.add(new EtapeDtoResponse(e)));
       //  this.covoitureurId = offreCovoiturage.getCovoitureur().getIdUtilisateur();
     }

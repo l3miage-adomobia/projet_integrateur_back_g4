@@ -15,6 +15,7 @@ public class ArretCovoiturageDtoResponse {
     private String adresseLieu;
     private Double longitude;
     private Double latitude;
+    private String typeArret;
     private Long lieuCodeInsee;
 
     public ArretCovoiturageDtoResponse(ArretCovoiturage arretCovoiturage){
@@ -23,6 +24,7 @@ public class ArretCovoiturageDtoResponse {
         this.adresseLieu = arretCovoiturage.getAdresseLieu();
         this.longitude = arretCovoiturage.getLongitude();
         this.latitude = arretCovoiturage.getLatitude();
+        this.typeArret = arretCovoiturage.getTypeArret();
         this.lieuCodeInsee = arretCovoiturage.getLieu().getCodeInsee();
     }
 }
