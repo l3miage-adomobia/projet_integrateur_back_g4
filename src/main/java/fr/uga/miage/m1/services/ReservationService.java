@@ -49,7 +49,9 @@ public class ReservationService {
 
         }else if (nbPaniersNonValides == 0) {
             Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
-            panier = new Panier(user,false);
+            panier = new Panier();
+            panier.setFestivalier(user);
+            panier.setValide(false);
             panierRepository.save(panier);
         }
 

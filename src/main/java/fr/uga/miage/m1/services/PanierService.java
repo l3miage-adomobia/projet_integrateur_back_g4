@@ -27,7 +27,7 @@ public class PanierService {
             // TODO error logic metier (toujours 1 ou 0 panier valide)
         }
 
-        Panier panier=null;
+        Panier panier = new Panier();
         if(nbPaniersNonValides == 1){
             List<Panier> paniers = panierRepository.getPaniersNonValides(mailUtilisateur);
             if(paniers.size()==1){
@@ -38,7 +38,9 @@ public class PanierService {
             }
         }else if (nbPaniersNonValides == 0) {  // si panier invalidé inexistant créer panier vide
             Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
-            panier = new Panier(user,false);
+            panier = new Panier();
+            panier.setFestivalier(user);
+            panier.setValide(false);
             panierRepository.save(panier);
         }
 
