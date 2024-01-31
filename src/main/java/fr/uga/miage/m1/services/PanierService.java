@@ -1,5 +1,6 @@
 package fr.uga.miage.m1.services;
 
+import fr.uga.miage.m1.model.dtoResponse.PanierDtoResponse;
 import fr.uga.miage.m1.model.entities.Panier;
 import fr.uga.miage.m1.model.entities.Utilisateur;
 import fr.uga.miage.m1.repository.FestivalRepository;
@@ -17,26 +18,21 @@ public class PanierService {
     private final PanierRepository panierRepository;
     private final UtilisateurRepository utilisateurRepository;
 
-    public Panier getPanierActif(String mailUtilisateur){
+    public PanierDtoResponse getPanierActif(String mailUtilisateur){
         //List<ReservationDtoResponse> r = new ArrayList<>();
         //reservationRepository.getReservationsPanierActif(mailFest).forEach(resa -> r.add(new ReservationDtoResponse(resa)));
         //return reservationRepository.getReservationsPanierActif(mailFest);
         int nbPaniersNonValides;
-        nbPaniersNonValides=panierRepository.getNbPanierNonValide(mailUtilisateur);
+        List<Panier> paniers = panierRepository.findPanierByFestivalier_EmailAndValideFalse(mailUtilisateur);
+        nbPaniersNonValides= paniers.size();
         if(nbPaniersNonValides != 0 && nbPaniersNonValides != 1){
             // TODO error logic metier (toujours 1 ou 0 panier valide)
         }
 
         Panier panier = new Panier();
         if(nbPaniersNonValides == 1){
-            List<Panier> paniers = panierRepository.getPaniersNonValides(mailUtilisateur);
-            if(paniers.size()==1){
-                panier = paniers.get(0); // panier d'où on extrait les information
-            }
-            else {
-                // TODO error logic metier (toujours 1 ou 0 panier valide)
-            }
-        }else if (nbPaniersNonValides == 0) {  // si panier invalidé inexistant créer panier vide
+                panier = paniers.get(0);
+        }else if (nbPaniersNonValides == 0) {
             Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
             panier = new Panier();
             panier.setFestivalier(user);
@@ -44,6 +40,6 @@ public class PanierService {
             panierRepository.save(panier);
         }
 
-        return panier;
+        return new PanierDtoResponse(panier);
     }
 }

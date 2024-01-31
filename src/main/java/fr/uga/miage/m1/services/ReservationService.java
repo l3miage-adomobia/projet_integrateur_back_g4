@@ -39,7 +39,7 @@ public class ReservationService {
         Panier panier=null;
 
         if(nbPaniersNonValides == 1){
-            List<Panier> paniers = panierRepository.getPaniersNonValides(mailUtilisateur);
+            List<Panier> paniers = panierRepository.findPanierByFestivalier_EmailAndValideFalse(mailUtilisateur);
             if(paniers.size()==1){
                 panier = paniers.get(0);
             }

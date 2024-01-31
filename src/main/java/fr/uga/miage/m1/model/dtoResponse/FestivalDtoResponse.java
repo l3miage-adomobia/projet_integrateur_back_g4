@@ -1,6 +1,12 @@
 package fr.uga.miage.m1.model.dtoResponse;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import fr.uga.miage.m1.model.entities.Festival;
+import fr.uga.miage.m1.model.entities.Lieu;
+import fr.uga.miage.m1.model.entities.OffreCovoiturage;
+import fr.uga.miage.m1.model.entities.SousDomaine;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +18,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FestivalDtoResponse {
+public class FestivalDtoResponse {//
 
     private Long idFestival;
     private String nomFestival;
@@ -22,9 +28,8 @@ public class FestivalDtoResponse {
     private LocalDate dateFin;
     private String lieuPrincipal;
     private int nombrePass;
-    private Long lieuCodeInsee;
-    private String nomSousDomaine;
-    private String domaine;
+    private LieuDTOresponse lieu;
+    private SousDomaineDTOresponse sousDomaine;
 
     public FestivalDtoResponse(Festival festival){
         this.idFestival = festival.getIdFestival();
@@ -34,7 +39,10 @@ public class FestivalDtoResponse {
         this.dateDebut = festival.getDateFin();
         this.dateFin = festival.getDateFin();
         this.lieuPrincipal = festival.getLieuPrincipal();
-        this.domaine = festival.getSousDomaine().getNomDomaine();
-        this.nomSousDomaine = festival.getSousDomaine().getNomSousDomaine();
+        this.nombrePass = festival.getNombrePass();
+        this.lieu = new LieuDTOresponse(festival.getLieu());
+        this.sousDomaine = new SousDomaineDTOresponse(festival.getSousDomaine());
+        //this.domaine = festival.getSousDomaine().getNomDomaine();
+        //this.nomSousDomaine = festival.getSousDomaine().getNomSousDomaine();
     }
 }

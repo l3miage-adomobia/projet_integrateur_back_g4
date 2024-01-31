@@ -24,7 +24,6 @@ public class Utilisateur {
     @Column(unique = true)
     private String email;
 
-    @JsonManagedReference
     private String typeUtilisateur;
     @OneToMany(mappedBy ="festivalier")
     private List<Panier> paniers;

@@ -29,7 +29,7 @@ public class Panier {
     @OneToMany(mappedBy ="panier")
     private List<Reservation> reservations;
 
-    @JsonBackReference
+
     @ManyToOne
     @JoinColumn(name = "FK_idFestivalier", referencedColumnName = "idUtilisateur")
     @NotNull
