@@ -4,13 +4,13 @@ import fr.uga.miage.m1.model.dtoResponse.ReservationDtoResponse;
 import fr.uga.miage.m1.model.entities.Panier;
 import fr.uga.miage.m1.services.ReservationService;
 import fr.uga.miage.m1.services.PanierService;
+import fr.uga.miage.m1.services.UtilisateurService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
 
 @CrossOrigin
 @Tag(name ="ReservationController controller")
@@ -19,10 +19,12 @@ import java.util.List;
 public class ReservationController {
     private final ReservationService reservationService;
     private final PanierService panierService;
+    private final UtilisateurService utilisateurService;
 
-    public ReservationController(ReservationService reservationService, PanierService panierService) {
+    public ReservationController(ReservationService reservationService, PanierService panierService, UtilisateurService utilisateurService) {
         this.reservationService = reservationService;
         this.panierService = panierService;
+        this.utilisateurService = utilisateurService;
     }
 
     @PostMapping("ajouter/mailFestivalier/{mailUtilisateur}/idEtape/{idEtape}/nbPlaces/{nbPlacesReserve}")
@@ -32,6 +34,7 @@ public class ReservationController {
             @PathVariable int nbPlacesReserve
     ) {
         try {
+
             Panier panier = panierService.getPanierActif(mailUtilisateur);
             ReservationDtoResponse response = reservationService.ajouterResaAuPanier(mailUtilisateur, idEtape, nbPlacesReserve, panier);
             return ResponseEntity.ok(response);
