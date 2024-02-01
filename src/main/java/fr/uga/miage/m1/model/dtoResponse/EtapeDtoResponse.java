@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Data
@@ -27,8 +26,7 @@ public class EtapeDtoResponse {
     public EtapeDtoResponse(Etape etape){
         this.idEtape = etape.getIdEtape();
         this.nbPlaces = etape.getOffreCovoiturage().getNbPlacesOffertes();
-        //this.nomCovoitureur = etape.getOffreCovoiturage().getCovoitureur().getNom();
-        this.nomCovoitureur = "Indéterminé pour l'instant";
+        this.nomCovoitureur = etape.getOffreCovoiturage().getCovoitureur().getNom();
         this.modeleVoiture = etape.getOffreCovoiturage().getModeleVoiture();
         this.tarif = etape.getTarif();
         this.duree = etape.getDuree();

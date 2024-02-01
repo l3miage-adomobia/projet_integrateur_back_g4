@@ -2,7 +2,6 @@ package fr.uga.miage.m1.services;
 
 import fr.uga.miage.m1.model.entities.Panier;
 import fr.uga.miage.m1.model.entities.Utilisateur;
-import fr.uga.miage.m1.repository.FestivalRepository;
 import fr.uga.miage.m1.repository.PanierRepository;
 import fr.uga.miage.m1.repository.UtilisateurRepository;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +21,7 @@ public class PanierService {
     public Panier getPanierActif(String mailUtilisateur){
 
         Panier panier;
-        List<Panier> paniers = panierRepository.getPaniersNonValides(mailUtilisateur);
+        List<Panier> paniers = panierRepository.findPanierByFestivalier_EmailAndValideFalse(mailUtilisateur);
         int nbPaniersNonValides = paniers.size();
 
         if(nbPaniersNonValides > 1){
@@ -33,8 +32,10 @@ public class PanierService {
             panier = paniers.get(0);
         }else { // L'utilisateur n'a pas de panier actif
 
+            panier = new Panier();
+            panier.setValide(false);
             Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
-            panier = new Panier(user,false);
+            panier.setFestivalier(user);
             panierRepository.save(panier);
         }
         return panier;
