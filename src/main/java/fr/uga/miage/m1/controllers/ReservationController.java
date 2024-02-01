@@ -2,6 +2,7 @@ package fr.uga.miage.m1.controllers;
 
 import fr.uga.miage.m1.model.dtoResponse.ReservationDtoResponse;
 import fr.uga.miage.m1.model.entities.Panier;
+import fr.uga.miage.m1.model.entities.Utilisateur;
 import fr.uga.miage.m1.services.ReservationService;
 import fr.uga.miage.m1.services.PanierService;
 import fr.uga.miage.m1.services.UtilisateurService;
@@ -21,7 +22,9 @@ public class ReservationController {
     private final PanierService panierService;
     private final UtilisateurService utilisateurService;
 
-    public ReservationController(ReservationService reservationService, PanierService panierService, UtilisateurService utilisateurService) {
+    public ReservationController(ReservationService reservationService,
+                                 PanierService panierService,
+                                 UtilisateurService utilisateurService) {
         this.reservationService = reservationService;
         this.panierService = panierService;
         this.utilisateurService = utilisateurService;
@@ -35,8 +38,7 @@ public class ReservationController {
     ) {
         try {
 
-            Panier panier = panierService.getPanierActif(mailUtilisateur);
-            ReservationDtoResponse response = reservationService.ajouterResaAuPanier(mailUtilisateur, idEtape, nbPlacesReserve, panier);
+            ReservationDtoResponse response = reservationService.ajouterResaAuPanier(mailUtilisateur, idEtape, nbPlacesReserve);
             return ResponseEntity.ok(response);
 
         } /*catch (PanierNotFoundException e) {

@@ -29,6 +29,8 @@ public class FestivalDtoResponse {//
     private String lieuPrincipal;
     private int nombrePass;
     private LieuDTOresponse lieu;
+
+    private String nomSousDomaine;
     private SousDomaineDTOresponse sousDomaine;
 
     public FestivalDtoResponse(Festival festival){
@@ -42,6 +44,7 @@ public class FestivalDtoResponse {//
         this.nombrePass = festival.getNombrePass();
         this.lieu = new LieuDTOresponse(festival.getLieu());
         this.sousDomaine = new SousDomaineDTOresponse(festival.getSousDomaine());
+        this.nomSousDomaine = this.sousDomaine.getNomSousDomaine();
         //this.domaine = festival.getSousDomaine().getNomDomaine();
         //this.nomSousDomaine = festival.getSousDomaine().getNomSousDomaine();
     }

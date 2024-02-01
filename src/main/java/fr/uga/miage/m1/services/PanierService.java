@@ -32,9 +32,9 @@ public class PanierService {
             panier = paniers.get(0);
         }else { // L'utilisateur n'a pas de panier actif
 
+            Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
             panier = new Panier();
             panier.setValide(false);
-            Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
             panier.setFestivalier(user);
             panierRepository.save(panier);
         }
