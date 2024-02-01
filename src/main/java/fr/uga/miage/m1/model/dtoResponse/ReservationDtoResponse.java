@@ -21,6 +21,7 @@ public class ReservationDtoResponse { //
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private String lieuPrincipal;
+    private int tarif;
     private int nbPlaces;
     private EtapeDtoResponse trajet;
     //private Long panierId;
@@ -32,6 +33,7 @@ public class ReservationDtoResponse { //
         this.dateDebut = reservation.getTrajet().getOffreCovoiturage().getFestival().getDateDebut();
         this.dateFin = reservation.getTrajet().getOffreCovoiturage().getFestival().getDateFin();
         this.lieuPrincipal = reservation.getTrajet().getOffreCovoiturage().getFestival().getLieuPrincipal();
+        this.tarif = reservation.getTrajet().getTarif();
         this.nbPlaces = reservation.getNbPlaces();
         //this.panierId = reservation.getPanier().getIdPanier();
         this.trajet = new EtapeDtoResponse(reservation.getTrajet());
