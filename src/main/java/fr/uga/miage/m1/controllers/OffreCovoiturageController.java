@@ -1,13 +1,16 @@
 package fr.uga.miage.m1.controllers;
 
 import fr.uga.miage.m1.model.dtoRequest.OffreCovoiturageRequest;
+import fr.uga.miage.m1.model.dtoResponse.EtapeDtoResponse;
 import fr.uga.miage.m1.model.dtoResponse.FestivalDtoResponse;
 import fr.uga.miage.m1.model.dtoResponse.OffreCovoiturageDtoResponse;
 import fr.uga.miage.m1.services.OffreCovoiturageService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -36,9 +39,14 @@ public class OffreCovoiturageController {
 */
 
     @GetMapping("/festival/{idFestival}")
-    public ResponseEntity<List<OffreCovoiturageDtoResponse>> getAllOffreCovoiturageByFestivalId(@PathVariable final Long idFestival){
-        List<OffreCovoiturageDtoResponse> offreCovoiturageList = covoiturageService.getAllOffreCovoiturageByFestivalId(idFestival);
-        return ResponseEntity.ok().body(offreCovoiturageList);
+    public ResponseEntity<List<EtapeDtoResponse>> getAllOffreCovoiturageByFestivalId(@PathVariable final Long idFestival){
+        try{
+            List<EtapeDtoResponse> offreCovoiturageList = covoiturageService.getAllOffreCovoiturageByFestivalId(idFestival);
+            return ResponseEntity.ok().body(offreCovoiturageList);
+        }catch(Exception e) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error fetching covoiturages for festival: "  + e.getMessage(), e);
+        }
+
     }
 
 

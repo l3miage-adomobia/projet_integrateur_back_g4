@@ -28,35 +28,14 @@ public class ReservationService {
     Le travail à faire au back end. recuperer ces informations pour creer une reservation et creer par la suite
     un panier. ( bien mettre en etat pas validé ).
  */
-    public ReservationDtoResponse ajouterResaAuPanier(String mailUtilisateur, Long idEtape, int nbPlacesReserve){
+    public ReservationDtoResponse ajouterResaAuPanier(String mailUtilisateur, Long idEtape, int nbPlacesReserve, Panier panier){
 
-        int nbPaniersNonValides;
-        nbPaniersNonValides=panierRepository.getNbPanierNonValide(mailUtilisateur);
-        if(nbPaniersNonValides != 0 && nbPaniersNonValides != 1){
-            // TODO error logic metier (toujours 1 ou 0 panier valide)
-        }
 
-        Panier panier=null;
-
-        if(nbPaniersNonValides == 1){
-            List<Panier> paniers = panierRepository.findPanierByFestivalier_EmailAndValideFalse(mailUtilisateur);
-            if(paniers.size()==1){
-                panier = paniers.get(0);
-            }
-            else {
-                // TODO error logic metier (toujours 1 ou 0 panier valide)
-            }
-
-        }else if (nbPaniersNonValides == 0) {
-            Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
-            panier = new Panier();
-            panier.setFestivalier(user);
-            panier.setValide(false);
-            panierRepository.save(panier);
-        }
-
+        Utilisateur user = utilisateurRepository.getUtilisateurByEmail(mailUtilisateur);
         Etape etape = etapeRepository.getEtapeByIdEtape(idEtape);
         Reservation reservation = new Reservation(nbPlacesReserve, etape, panier);
+
+        panierRepository.save(panier);
         reservationRepository.save(reservation);
 
         return new ReservationDtoResponse(reservation);

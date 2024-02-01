@@ -1,6 +1,5 @@
 package fr.uga.miage.m1.model.entities;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
@@ -14,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Utilisateur {
+public abstract class Utilisateur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUtilisateur;
@@ -23,8 +22,9 @@ public class Utilisateur {
     @Email
     @Column(unique = true)
     private String email;
-
+    @NotNull
     private String typeUtilisateur;
+    private String mdp;
     @OneToMany(mappedBy ="festivalier")
     private List<Panier> paniers;
 }

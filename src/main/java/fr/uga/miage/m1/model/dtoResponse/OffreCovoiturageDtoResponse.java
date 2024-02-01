@@ -21,9 +21,10 @@ public class OffreCovoiturageDtoResponse { //
     private int nbPlacesOffertes;
     private String modeleVoiture;
     private FestivalDtoResponse festival;
-    //private Long covoitureurId;
+    private Long covoitureurId;
 
     public OffreCovoiturageDtoResponse(OffreCovoiturage offreCovoiturage){
+
         this.idOffreDeCovoiturage = offreCovoiturage.getIdOffreDeCovoiturage();
         this.nbPlacesOffertes = offreCovoiturage.getNbPlacesOffertes();
         this.modeleVoiture = offreCovoiturage.getModeleVoiture();

@@ -34,4 +34,6 @@ public class Etape {
     @JoinColumn(name = "FK_offre", referencedColumnName = "idOffreDeCovoiturage")
     @NotNull
     private OffreCovoiturage offreCovoiturage;
+
+
 }

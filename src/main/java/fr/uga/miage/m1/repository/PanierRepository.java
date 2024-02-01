@@ -13,7 +13,9 @@ import java.util.List;
 public interface PanierRepository extends JpaRepository<Panier,Long> {
 
 
-    @Query("SELECT count(*) FROM Panier p join Utilisateur u where u.email=?1 AND p.valide=false")
+    @Query("SELECT count(*) " +
+            "FROM Panier p join Utilisateur u ON p.fk_id_festivalier = u.id_utilisateur" +
+            "WHERE u.email=?1 AND p.valide=false")
     int getNbPanierNonValide(String userMail);
 
     //@Query("SELECT p FROM Panier p  join Utilisateur u where u.email= :m and p.valide=false")

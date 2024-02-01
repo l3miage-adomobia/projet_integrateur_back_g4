@@ -8,6 +8,10 @@
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
   </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="23c7abfc-59f9-4373-aa52-252168c4e57b" />
   </component>
