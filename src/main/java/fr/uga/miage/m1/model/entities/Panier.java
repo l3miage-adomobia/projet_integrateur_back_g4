@@ -1,28 +1,38 @@
 package fr.uga.miage.m1.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import net.minidev.json.annotate.JsonIgnore;
+
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Panier {
+
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPanier;
-    @NotNull
-    private Integer nbPlacesReserve;
+
     @NotNull
     private Boolean valide;
 
+
+    @OneToMany(mappedBy ="panier")
+    private List<Reservation> reservations;
+
+
     @ManyToOne
-    @JoinColumn(name = "idFestivalier")
+    @JoinColumn(name = "FK_idFestivalier", referencedColumnName = "idUtilisateur")
     @NotNull
-    private Festivalier festivalier;
+    private Utilisateur festivalier;
 
 }

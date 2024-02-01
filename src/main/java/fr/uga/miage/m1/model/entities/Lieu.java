@@ -1,9 +1,6 @@
 package fr.uga.miage.m1.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,21 +10,22 @@ import lombok.Setter;
 @Setter
 public class Lieu {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idLieu;
+
     @NotNull
     private Long codeInsee;
-    @NotNull
-    private int codePostal;
-    @NotNull
+    @Column(nullable = true)
+    private Integer codePostal;
     private String nomCommune;
 
     @NotNull
-    private Double longitudeCommune;
+    private Double longitude;
     @NotNull
-    private Double latitudeCommune;
+    private Double latitude;
 
     @ManyToOne
-    @JoinColumn(name = "noDepartement", referencedColumnName = "noDepartement")
-    @NotNull
+    @JoinColumn(name = "FK_idDepartement", referencedColumnName = "idDepartement")
     private Departement departement;
 
 }

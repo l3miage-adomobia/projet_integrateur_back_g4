@@ -1,36 +1,41 @@
 package fr.uga.miage.m1.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "reservation")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Reservation {
-    @EmbeddedId
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idReservation;
+
     @NotNull
-    private ReservationId reservationId;
+    private int nbPlaces;
+
+    @OneToOne
+    @JoinColumn(name = "FK_idEtape", referencedColumnName = "idEtape")
+    @NotNull
+    private Etape trajet;
 
     @ManyToOne
-    @JoinColumn(name = "idOffreDeCovoiturage", referencedColumnName = "idOffreDeCovoiturage")
-    @MapsId("idOffreDeCovoiturage")
-    @NotNull
-    private OffreCovoiturage offreCovoiturage;
-
-    @ManyToOne
-    @JoinColumn(name = "idPanier", referencedColumnName = "idPanier")
-    @MapsId("idPanier")
+    @JoinColumn(name = "FK_idPanier", referencedColumnName = "idPanier")
     @NotNull
     private Panier panier;
 
-    @ManyToOne
-    @JoinColumn(name = "idArret", referencedColumnName = "idArret")
-    @MapsId("idArret")
-    private ArretCovoiturage arretCovoiturage;
-
-    private Integer nbPlaces;
-
+    public Reservation(int nbPlaces, Etape trajet, Panier panier){
+        this.nbPlaces = nbPlaces;
+        this.trajet = trajet;
+        this.panier = panier;
+    }
 }
