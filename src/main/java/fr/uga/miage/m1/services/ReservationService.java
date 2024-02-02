@@ -10,8 +10,12 @@ import fr.uga.miage.m1.repository.PanierRepository;
 import fr.uga.miage.m1.repository.ReservationRepository;
 import fr.uga.miage.m1.repository.UtilisateurRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -30,6 +34,8 @@ public class ReservationService {
     Le travail à faire au back end. recuperer ces informations pour creer une reservation et creer par la suite
     un panier. ( bien mettre en etat pas validé ).
  */
+    @SneakyThrows
+    @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public ReservationDtoResponse ajouterResaAuPanier(String mailUtilisateur, Long idEtape, int nbPlacesReserve){
             Etape etape = etapeRepository.getEtapeByIdEtape(idEtape);
             if(etape == null){

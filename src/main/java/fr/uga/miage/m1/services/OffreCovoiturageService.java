@@ -10,6 +10,7 @@ import fr.uga.miage.m1.model.entities.OffreCovoiturage;
 import fr.uga.miage.m1.repository.FestivalRepository;
 import fr.uga.miage.m1.repository.OffreCovoiturageRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -48,6 +49,8 @@ public class OffreCovoiturageService {
 
         }
 */
+        @Transactional(readOnly = true)
+        @SneakyThrows
         public List<EtapeDtoResponse> getAllOffreCovoiturageByFestivalId(Long idFestival) {
 
             List<EtapeDtoResponse> etapeCovoiturageDtoList = new ArrayList<EtapeDtoResponse>();
